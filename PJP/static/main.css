@@ -1,0 +1,65 @@
+.nav-bg-color {
+  background-color: rgb(1, 47, 73) !important;
+}
+
+.img-adjust {
+  height: 90vh;
+  width: 100%;
+  position: absolute;
+}
+
+.blank-div {
+  background-color: rgb(15, 72, 105);
+  opacity: 0.65;
+  height: 90vh;
+}
+
+.footer-css {
+  background-color: rgb(1, 47, 73) !important;
+  height: 10vh;
+  width: 100%;
+}
+.button-options {
+  position: absolute;
+  margin: auto auto;
+  z-index: 10;
+  top: 40%;
+  left: 40%;
+  align-items: center;
+}
+
+.view-as-admin {
+  background-color: rgb(15, 72, 105);
+  color: white;
+}
+.view-as-admin:hover {
+  background-color: white;
+  color: rgb(1, 47, 73);
+  border: 1px solid rgb(1, 47, 73);
+}
+
+.view-as-user {
+  color: rgb(1, 47, 73);
+  border-color: rgb(1, 47, 73);
+  background-color: white;
+}
+
+.view-as-user:hover {
+  background-color: rgb(15, 72, 105);
+  border: none;
+  color: white;
+}
+
+section {
+  position: relative;
+}
+
+.tagline {
+  text-align: center;
+  color: white;
+}
+
+.btn-outline {
+  color: white;
+  border-color: white;
+}
