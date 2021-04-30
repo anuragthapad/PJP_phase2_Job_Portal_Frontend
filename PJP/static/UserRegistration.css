@@ -1,9 +1,5 @@
 .date {
-    display: inline;
-}
-
-.afterdate {
-    margin-top: 10px;
+    display: inline-block;
 }
 
 div {
