@@ -24,8 +24,8 @@
 .options {
   position: absolute;
   z-index: 10;
-  top: 40vh;
-  left: 40vw;
+  top: 40%;
+  left: 40%;
 }
 
 .view-as-admin {
@@ -59,41 +59,11 @@ section {
   color: white;
   position: absolute;
   z-index: 10;
-  top: 30vh;
-  left: 35vw;
+  top: 30%;
+  left: 35%;
 }
 
 .btn-outline {
   color: white;
   border-color: white;
-}
-
-@media (min-width: 400px) and (max-width: 600px) {
-  .options {
-    left: 20vw;
-  }
-
-  .tagline {
-    left: 15vw;
-  }
-}
-
-@media (min-width: 601px) and (max-width: 800px) {
-  .options {
-    left: 25vw;
-  }
-
-  .tagline {
-    left: 20vw;
-  }
-}
-
-@media (min-width: 801) and (max-width: 1080px) {
-  .options {
-    left: 30vw;
-  }
-
-  .tagline {
-    left: 25vw;
-  }
 }
