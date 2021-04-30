@@ -12,297 +12,299 @@
 </head>
 
 <body>
-    <h1>User Registration Form</h1>
+    <section>
+        <h1>User Registration Form</h1>
 
-    <hr>
+        
 
-    <form action="index.html">
+        <form action="index.html">
 
-        <!-- Div for Personal Details -->
-
-        <div>
-            <h2>Personal Details</h2>
-            <div>
-                <label for="firstname">First Name</label>
-                <input type="text" name="firstname" id="firstname" placeholder="First Name" required>
-
-                <label for="lastname">Last Name</label>
-                <input type="text" name="lastname" id="lastname" placeholder="Last Name" required>
-            </div>
+            <!-- Div for Personal Details -->
 
             <div>
-                <label for="gender">Gender</label>
-                <select name="gender" id="gender">
-                    <option value="">Select</option>
-                    <option value="prefernottosay">Prefer not to say</option>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                </select>
-            </div>
-
-            <div>
-                <label for="dob">Date of Birth</label>
-                <input type="date" name="dob" id="dob" required>
-            </div>
-
-            <div>
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" placeholder="Email" required>
-            </div>
-
-            <div>
-                <label for="phone">Phone</label>
-                <input type="tel" name="phone" id="phone" minlength="10" maxlength="10"
-                    placeholder="Enter 10 Digit Number" pattern="[0-9]{10}" required>
-                <span class="telvalidity"></span>
-            </div>
-
-            <div>
-                <label for="yearsofexp">Years of Experience</label>
-                <input type="number" name="yearsofexp" id="yearsofexp" min="0" max="55" required>
-            </div>
-
-            <div>
-                <label for="profilepic">Profile Picture</label>
-                <input type="file" name="profilepic" id="profilepic" accept="image/*">
-            </div>
-        </div>
-
-        <hr>
-
-        <!-- Div for Qualification Details -->
-
-        <div>
-            <h2>Qualification Details</h2>
-
-            <div id="clonedqual1" class="clonedqual">
+                <h2>Personal Details</h2>
                 <div>
-                    Institute Name
-                    <input type="text" name="institutename1" id="institutename1" placeholder="Institute Name">
-                </div>
+                    <label for="firstname">First Name</label>
+                    <input type="text" name="firstname" id="firstname" placeholder="First Name" required>
 
-                <div class="date">
-                    Start Date
-                    <input type="date" name="startedstudyingyear1" id="startedstudyingyear1">
-                </div>
-
-                <div class="date">
-                    End Date
-                    <input type="date" name="endingstudyingyear1" id="endingstudyingyear1">
+                    <label for="lastname">Last Name</label>
+                    <input type="text" name="lastname" id="lastname" placeholder="Last Name" required>
                 </div>
 
                 <div>
-                    Degree
-                    <input type="text" name="degree1" id="degree1" placeholder="e.g. B.Tech">
+                    <label for="gender">Gender</label>
+                    <select name="gender" id="gender">
+                        <option value="">Select</option>
+                        <option value="prefernottosay">Prefer not to say</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
                 </div>
 
                 <div>
-                    Stream
-                    <input type="text" name="stream1" id="stream1" placeholder="e.g. Computer Science">
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" name="dob" id="dob" required>
                 </div>
 
                 <div>
-                    Percentage
-                    <input type="number" name="percentage1" id="percentage1" min="0" max="100">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Email" required>
+                </div>
+
+                <div>
+                    <label for="phone">Phone</label>
+                    <input type="tel" name="phone" id="phone" minlength="10" maxlength="10"
+                        placeholder="Enter 10 Digit Number" pattern="[0-9]{10}" required>
+                    <span class="telvalidity"></span>
+                </div>
+
+                <div>
+                    <label for="yearsofexp">Years of Experience</label>
+                    <input type="number" name="yearsofexp" id="yearsofexp" min="0" max="55" required>
+                </div>
+
+                <div>
+                    <label for="profilepic">Profile Picture</label>
+                    <input type="file" name="profilepic" id="profilepic" accept="image/*">
                 </div>
             </div>
+
+            
+
+            <!-- Div for Qualification Details -->
 
             <div>
-                <input type="button" id="btnAddqual" value="Add Another Qualification" />
-                <input type="button" id="btnDelqual" value="Remove Qualification" />
-            </div>
-        </div>
+                <h2>Qualification Details</h2>
 
-        <hr>
+                <div id="clonedqual1" class="clonedqual">
+                    <div>
+                        Institute Name
+                        <input type="text" name="institutename1" id="institutename1" placeholder="Institute Name">
+                    </div>
 
-        <!-- Div for Skills -->
+                    <div class="date">
+                        Start Date
+                        <input type="date" name="startedstudyingyear1" id="startedstudyingyear1">
+                    </div>
 
-        <div>
-            <h2>Skills</h2>
-            <div id="clonedskill1" class="clonedskill">
+                    <div class="date">
+                        End Date
+                        <input type="date" name="endingstudyingyear1" id="endingstudyingyear1">
+                    </div>
+
+                    <div>
+                        Degree
+                        <input type="text" name="degree1" id="degree1" placeholder="e.g. B.Tech">
+                    </div>
+
+                    <div>
+                        Stream
+                        <input type="text" name="stream1" id="stream1" placeholder="e.g. Computer Science">
+                    </div>
+
+                    <div>
+                        Percentage
+                        <input type="number" name="percentage1" id="percentage1" min="0" max="100">
+                    </div>
+                </div>
+
                 <div>
-                    Skill: <input type='text' name='skill1' id='skill1' />
+                    <input type="button" id="btnAddqual" value="Add Another Qualification" />
+                    <input type="button" id="btnDelqual" value="Remove Qualification" />
                 </div>
             </div>
+
+           
+
+            <!-- Div for Skills -->
 
             <div>
-                <input type="button" id="btnAddskill" value="Add Another Skill" />
-                <input type="button" id="btnDelskill" value="Remove Skill" />
-            </div>
-        </div>
-
-        <hr>
-
-        <!-- Div for Work Experience -->
-
-        <div>
-            <h2>Work Experience</h2>
-            <div id="clonedwork1" class="clonedwork">
-                <div>
-                    Role
-                    <input type="text" name="role1" id="role1" placeholder="e.g. Web Developer">
+                <h2>Skills</h2>
+                <div id="clonedskill1" class="clonedskill">
+                    <div>
+                        Skill: <input type='text' name='skill1' id='skill1' />
+                    </div>
                 </div>
 
                 <div>
-                    Organization
-                    <input type="text" name="organization1" id="organization1" placeholder="e.g. Publicis Sapient">
-                </div>
-
-                <div>
-                    Location
-                    <input type="text" name="workedlocation1" id="workedlocation1" placeholder="e.g. Bangalore">
-                </div>
-
-                <div class="date">
-                    Start Date
-                    <input type="date" name="startedworkingyear1" id="startedworkingyear1">
-                </div>
-
-                <div class="date">
-                    End Date
-                    <input type="date" name="endingworkingyear1" id="endingworkingyear1">
-                </div>
-
-                <div>
-                    <textarea name="shortdescriptionofworkdone1" id="shortdescriptionofworkdone1" cols="30" rows="10"
-                        placeholder="Short Description of work done"></textarea>
+                    <input type="button" id="btnAddskill" value="Add Another Skill" />
+                    <input type="button" id="btnDelskill" value="Remove Skill" />
                 </div>
             </div>
+
+          
+
+            <!-- Div for Work Experience -->
 
             <div>
-                <input type="button" id="btnAddwork" value="Add Another Experience" />
-                <input type="button" id="btnDelwork" value="Remove Experience" />
-            </div>
-        </div>
+                <h2>Work Experience</h2>
+                <div id="clonedwork1" class="clonedwork">
+                    <div>
+                        Role
+                        <input type="text" name="role1" id="role1" placeholder="e.g. Web Developer">
+                    </div>
 
-        <hr>
+                    <div>
+                        Organization
+                        <input type="text" name="organization1" id="organization1" placeholder="e.g. Publicis Sapient">
+                    </div>
 
-        <!-- Div for Project Details -->
+                    <div>
+                        Location
+                        <input type="text" name="workedlocation1" id="workedlocation1" placeholder="e.g. Bangalore">
+                    </div>
 
-        <div>
-            <h2>Project Details</h2>
+                    <div class="date">
+                        Start Date
+                        <input type="date" name="startedworkingyear1" id="startedworkingyear1">
+                    </div>
 
-            <div id="clonedproject1" class="clonedproject">
-                <div>
-                    Title
-                    <input type="text" name="projecttitle1" id="projecttitle1"
-                        placeholder="e.g. Job Registration Protal">
-                </div>
+                    <div class="date">
+                        End Date
+                        <input type="date" name="endingworkingyear1" id="endingworkingyear1">
+                    </div>
 
-                <div class="date">
-                    Start Date
-                    <input type="date" name="startedprojectyear1" id="startedprojectyear1">
-                </div>
-
-                <div class="date">
-                    End Date
-                    <input type="date" name="endingprojectyear1" id="endingprojectyear1">
-                </div>
-
-                <div>
-                    <textarea name="shortdescriptionofprojectdone1" id="shortdescriptionofprojectdone1" cols="30"
-                        rows="10" placeholder="Short Description of project"></textarea>
-                </div>
-            </div>
-
-
-            <div>
-                <input type="button" id="btnAddproject" value="Add Another Project" />
-                <input type="button" id="btnDelproject" value="Remove project" />
-            </div>
-
-        </div>
-
-        <hr>
-
-        <!-- Div for Certifications -->
-
-        <div>
-            <h2>Certifications</h2>
-
-            <div id="clonedcertificate1" class="clonedcertificate">
-                <div>
-                    Course Name
-                    <input type="text" name="coursename1" id="coursename1" placeholder="e.g. SQL">
+                    <div>
+                        <textarea name="shortdescriptionofworkdone1" id="shortdescriptionofworkdone1" cols="30"
+                            rows="10" placeholder="Short Description of work done"></textarea>
+                    </div>
                 </div>
 
                 <div>
-                    Issuing Organization
-                    <input type="text" name="courseorganization1" id="courseorganization1" placeholder="e.g. Udemy">
+                    <input type="button" id="btnAddwork" value="Add Another Experience" />
+                    <input type="button" id="btnDelwork" value="Remove Experience" />
+                </div>
+            </div>
+
+          
+
+            <!-- Div for Project Details -->
+
+            <div>
+                <h2>Project Details</h2>
+
+                <div id="clonedproject1" class="clonedproject">
+                    <div>
+                        Title
+                        <input type="text" name="projecttitle1" id="projecttitle1"
+                            placeholder="e.g. Job Registration Protal">
+                    </div>
+
+                    <div class="date">
+                        Start Date
+                        <input type="date" name="startedprojectyear1" id="startedprojectyear1">
+                    </div>
+
+                    <div class="date">
+                        End Date
+                        <input type="date" name="endingprojectyear1" id="endingprojectyear1">
+                    </div>
+
+                    <div>
+                        <textarea name="shortdescriptionofprojectdone1" id="shortdescriptionofprojectdone1" cols="30"
+                            rows="10" placeholder="Short Description of project"></textarea>
+                    </div>
+                </div>
+
+
+                <div>
+                    <input type="button" id="btnAddproject" value="Add Another Project" />
+                    <input type="button" id="btnDelproject" value="Remove project" />
+                </div>
+
+            </div>
+
+           
+
+            <!-- Div for Certifications -->
+
+            <div>
+                <h2>Certifications</h2>
+
+                <div id="clonedcertificate1" class="clonedcertificate">
+                    <div>
+                        Course Name
+                        <input type="text" name="coursename1" id="coursename1" placeholder="e.g. SQL">
+                    </div>
+
+                    <div>
+                        Issuing Organization
+                        <input type="text" name="courseorganization1" id="courseorganization1" placeholder="e.g. Udemy">
+                    </div>
+
+                    <div>
+                        Issue Date
+                        <input type="date" name="certificateissuedate1" id="certificateissuedate1">
+                    </div>
+
                 </div>
 
                 <div>
-                    Issue Date
-                    <input type="date" name="certificateissuedate1" id="certificateissuedate1">
+                    <input type="button" id="btnAddcertificate" value="Add Another certificate" />
+                    <input type="button" id="btnDelcertificate" value="Remove certificate" />
                 </div>
 
             </div>
 
-            <div>
-                <input type="button" id="btnAddcertificate" value="Add Another certificate" />
-                <input type="button" id="btnDelcertificate" value="Remove certificate" />
-            </div>
+           
 
-        </div>
-
-        <hr>
-
-        <!-- Div for Awards and Achievements -->
-
-        <div>
-            <h2>Awards and Achievments</h2>
-            <p>Add your accomplishments such as rewards, recognitions, test scores, certifications, etc. here.</p>
-            <div>
-                <textarea name="descriptionofaccomplishments" id="descriptionofaccomplishments" cols="30" rows="10"
-                    placeholder="e.g. Achieved Expert level in CodeForces"></textarea>
-            </div>
-
-        </div>
-
-        <hr>
-
-        <!-- Div for Others -->
-
-        <div>
-            <h2>Others</h2>
-            <div>
-                <label for="locationpreference">Location Preference</label>
-                <select name="locationpreference" id="locationpreference" required>
-                    <option value="">Select</option>
-                    <option value="bangalore">Bangalore</option>
-                    <option value="hyderabad">Hyderabad</option>
-                    <option value="gurugram">Gurugram</option>
-                    <option value="mumbai">Mumbai</option>
-                </select>
-            </div>
+            <!-- Div for Awards and Achievements -->
 
             <div>
-                <p>Relocate: <label for="yesrelocate">Yes</label>
-                    <input type="radio" name="relocate" id="yesrelocate" value="yes" required>
-
-                    <label for="norelocate">No</label>
-                    <input type="radio" name="relocate" id="norelocate" value="no" required>
-                <p>
-
+                <h2>Awards and Achievments</h2>
+                <p>Add your accomplishments such as rewards, recognitions, test scores, certifications, etc. here.</p>
+                <div>
+                    <textarea name="descriptionofaccomplishments" id="descriptionofaccomplishments" cols="30" rows="10"
+                        placeholder="e.g. Achieved Expert level in CodeForces"></textarea>
+                </div>
 
             </div>
 
+            
+
+            <!-- Div for Others -->
+
             <div>
-                <label for="salaryexp">Salary Expectation</label>
-                <input type="number" name="salaryexp" id="salaryexp" min="0" max="1000000000" required>
+                <h2>Others</h2>
+                <div>
+                    <label for="locationpreference">Location Preference</label>
+                    <select name="locationpreference" id="locationpreference" required>
+                        <option value="">Select</option>
+                        <option value="bangalore">Bangalore</option>
+                        <option value="hyderabad">Hyderabad</option>
+                        <option value="gurugram">Gurugram</option>
+                        <option value="mumbai">Mumbai</option>
+                    </select>
+                </div>
+
+                <div>
+                    <p>Relocate: <label for="yesrelocate">Yes</label>
+                        <input type="radio" name="relocate" id="yesrelocate" value="yes" required>
+
+                        <label for="norelocate">No</label>
+                        <input type="radio" name="relocate" id="norelocate" value="no" required>
+                    <p>
+
+
+                </div>
+
+                <div>
+                    <label for="salaryexp">Salary Expectation</label>
+                    <input type="number" name="salaryexp" id="salaryexp" min="0" max="1000000000" required>
+                </div>
+
             </div>
 
-        </div>
+            
 
-        <hr>
+            <!-- Div for Registration Button -->
 
-        <!-- Div for Registration Button -->
+            <div>
+                <button>Register</button>
+            </div>
 
-        <div>
-            <button>Register</button>
-        </div>
-
-    </form>
+        </form>
+    </section>
 </body>
 
 </html>
