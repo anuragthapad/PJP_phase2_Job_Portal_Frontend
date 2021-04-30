@@ -53,7 +53,8 @@
             <div>
                 <label for="phone">Phone</label>
                 <input type="tel" name="phone" id="phone" minlength="10" maxlength="10"
-                    placeholder="Enter 10 Digit Number" required>
+                    placeholder="Enter 10 Digit Number" pattern="[0-9]{10}" required>
+                <span class="telvalidity"></span>
             </div>
 
             <div>
@@ -266,7 +267,7 @@
             <h2>Others</h2>
             <div>
                 <label for="locationpreference">Location Preference</label>
-                <select name="locationpreference" id="locationpreference">
+                <select name="locationpreference" id="locationpreference" required>
                     <option value="">Select</option>
                     <option value="bangalore">Bangalore</option>
                     <option value="hyderabad">Hyderabad</option>
@@ -277,10 +278,10 @@
 
             <div>
                 <p>Relocate: <label for="yesrelocate">Yes</label>
-                    <input type="radio" name="relocate" id="yesrelocate" value="yes">
+                    <input type="radio" name="relocate" id="yesrelocate" value="yes" required>
 
                     <label for="norelocate">No</label>
-                    <input type="radio" name="relocate" id="norelocate" value="no">
+                    <input type="radio" name="relocate" id="norelocate" value="no" required>
                 <p>
 
 
