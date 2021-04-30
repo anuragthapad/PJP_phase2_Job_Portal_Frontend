@@ -6,13 +6,14 @@ function startWithU(targ) {
 
 };
 
-function startWithA(targ) {
-	if ((targ.startsWith("a", 0) || targ.startsWith("A", 0)) == true) {
+function startWithC(targ) {
+	if ((targ.startsWith("c", 0) || targ.startsWith("C", 0)) == true) {
 		return true;
 	}
 	else return false;
 
 };
+
 function validateform(form) {
 	var temp = document.getElementById("user_id").value;
 	if (temp.length < 8) {
@@ -22,9 +23,9 @@ function validateform(form) {
 
 	}
 	var sU = startWithU(temp);
-	var sA = startWithA(temp);
-	if ((sU || sA) == false) {
-		document.getElementById("user_val").innerHTML = "Error : User ID must start with U or A.";
+	var sC = startWithC(temp);
+	if ((sU || sC) == false) {
+		document.getElementById("user_val").innerHTML = "Error : User ID must start with U or C.";
 		document.getElementById("SignUP_form").reset();
 		return false;
 	}
