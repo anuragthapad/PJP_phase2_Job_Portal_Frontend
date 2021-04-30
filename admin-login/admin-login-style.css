@@ -10,9 +10,11 @@
 *{
     margin:0;
 }
-/* .body{
+
+/* comment this part if not looks nice, white background also looks decent :p */
+.body{
     background-color: #64889e;
-} */
+} 
 .container{
     margin:auto;
     width:100%;
