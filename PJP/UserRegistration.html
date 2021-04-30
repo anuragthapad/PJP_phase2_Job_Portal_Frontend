@@ -117,45 +117,52 @@
 
             <!-- Div for Qualification Details -->
 
-            <div class="row g-3">
+            <div>
                 <br>
                 <br>
                 <h2 class="display-6">Qualification Details</h2>
 
                 <div id="clonedqual1" class="clonedqual">
-                    <div class="mb-3">
-                        Institute Name
-                        <input class="form-control" type="text" name="institutename1" id="institutename1"
-                            placeholder="Institute Name">
+                    <div class="row g-3">
+                        <div class="col-12">
+                            <label for="institutename1">Institute Name</label>
+                            <input class="form-control" type="text" name="institutename1" id="institutename1"
+                                placeholder="Institute Name">
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="startedstudyingyear1">Start Date</label>
+                            <input class="form-control" type="date" name="startedstudyingyear1"
+                                id="startedstudyingyear1">
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="endingstudyingyear1">End Date</label>
+                            <input class="form-control" type="date" name="endingstudyingyear1" id="endingstudyingyear1">
+                        </div>
+
+                        <div class="col-12">
+                            <label for="degree1">Degree</label>
+                            <input class="form-control" type="text" name="degree1" id="degree1"
+                                placeholder="e.g. B.Tech">
+                        </div>
+
+                        <div class="col-12">
+                            <label for="stream1">stream1</label>
+                            <input class="form-control" type="text" name="stream1" id="stream1"
+                                placeholder="e.g. Computer Science">
+                        </div>
+
+                        <div class="col-12">
+                            <label for="percentage1">Percentage</label>
+                            <input class="form-control" type="number" name="percentage1" id="percentage1" min="0"
+                                max="100">
+                        </div>
                     </div>
 
-                    <div class="col-md-6">
-                        Start Date
-                        <input class="form-control" type="date" name="startedstudyingyear1" id="startedstudyingyear1">
-                    </div>
-
-                    <div class="col-md-6">
-                        End Date
-                        <input class="form-control" type="date" name="endingstudyingyear1" id="endingstudyingyear1">
-                    </div>
-
-                    <div class="mb-3">
-                        Degree
-                        <input class="form-control" type="text" name="degree1" id="degree1" placeholder="e.g. B.Tech">
-                    </div>
-
-                    <div class="mb-3">
-                        Stream
-                        <input class="form-control" type="text" name="stream1" id="stream1"
-                            placeholder="e.g. Computer Science">
-                    </div>
-
-                    <div class="mb-3">
-                        Percentage
-                        <input class="form-control" type="number" name="percentage1" id="percentage1" min="0" max="100">
-                    </div>
                 </div>
 
+                <br>
                 <div>
                     <input class="btn btn-outline-success btn-sm" type="button" id="btnAddqual"
                         value="Add Another Qualification" />
@@ -168,14 +175,18 @@
 
             <!-- Div for Skills -->
 
-            <div class="row g-3">
+            <div>
                 <br>
                 <br>
                 <h2 class="display-6">Skills</h2>
                 <div id="clonedskill1" class="clonedskill">
-                    <div class="mb-3">
-                        Skill: <input class="form-control" type='text' name='skill1' id='skill1' />
+                    <div>
+                        <div class="mb-3">
+                            <label for="skill1">Skill</label>
+                            <input class="form-control" type='text' name='skill1' id='skill1' />
+                        </div>
                     </div>
+
                 </div>
 
                 <div>
@@ -189,46 +200,50 @@
 
             <!-- Div for Work Experience -->
 
-            <div class="row g-3">
+            <div>
                 <br>
                 <br>
                 <h2 class="display-6">Work Experience</h2>
                 <div id="clonedwork1" class="clonedwork">
-                    <div class="mb-3">
-                        Role
-                        <input class="form-control" type="text" name="role1" id="role1"
-                            placeholder="e.g. Web Developer">
+                    <div class="row g-3">
+                        <div class="col-12">
+                            <label for="role1">Role</label>
+                            <input class="form-control" type="text" name="role1" id="role1"
+                                placeholder="e.g. Web Developer">
+                        </div>
+
+                        <div class="col-12">
+                            <label for="organization1">Organization</label>
+                            <input class="form-control" type="text" name="organization1" id="organization1"
+                                placeholder="e.g. Publicis Sapient">
+                        </div>
+
+                        <div class="col-12">
+                            <label for="workedlocation1">Location</label>
+                            <input class="form-control" type="text" name="workedlocation1" id="workedlocation1"
+                                placeholder="e.g. Bangalore">
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="startedworkingyear1">Start Date</label>
+                            <input class="form-control" type="date" name="startedworkingyear1" id="startedworkingyear1">
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="endingworkingyear1">End Date</label>
+                            <input class="form-control" type="date" name="endingworkingyear1" id="endingworkingyear1">
+                        </div>
+
+                        <div class="col-12">
+                            <textarea class="form-control" name="shortdescriptionofworkdone1"
+                                id="shortdescriptionofworkdone1" cols="30" rows="10"
+                                placeholder="Short Description of work done"></textarea>
+                        </div>
                     </div>
 
-                    <div class="mb-3">
-                        Organization
-                        <input class="form-control" type="text" name="organization1" id="organization1"
-                            placeholder="e.g. Publicis Sapient">
-                    </div>
-
-                    <div class="mb-3">
-                        Location
-                        <input class="form-control" type="text" name="workedlocation1" id="workedlocation1"
-                            placeholder="e.g. Bangalore">
-                    </div>
-
-                    <div class="col-md-6">
-                        Start Date
-                        <input class="form-control" type="date" name="startedworkingyear1" id="startedworkingyear1">
-                    </div>
-
-                    <div class="col-md-6">
-                        End Date
-                        <input class="form-control" type="date" name="endingworkingyear1" id="endingworkingyear1">
-                    </div>
-
-                    <div class="mb-3">
-                        <textarea class="form-control" name="shortdescriptionofworkdone1"
-                            id="shortdescriptionofworkdone1" cols="30" rows="10"
-                            placeholder="Short Description of work done"></textarea>
-                    </div>
                 </div>
 
+                <br>
                 <div>
                     <input class="btn btn-outline-success btn-sm" type="button" id="btnAddwork"
                         value="Add Another Experience" />
@@ -241,36 +256,40 @@
 
             <!-- Div for Project Details -->
 
-            <div class="row g-3">
+            <div>
                 <br>
                 <br>
                 <h2 class="display-6">Project Details</h2>
 
                 <div id="clonedproject1" class="clonedproject">
-                    <div class="mb-3">
-                        Title
-                        <input class="form-control" type="text" name="projecttitle1" id="projecttitle1"
-                            placeholder="e.g. Job Registration Protal">
+                    <div class="row g-3">
+                        <div class="col-12">
+                            <label for="projecttitle1">Title</label>
+                            <input class="form-control" type="text" name="projecttitle1" id="projecttitle1"
+                                placeholder="e.g. Job Registration Protal">
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="startedprojectyear1">Start Date</label>
+                            <input class="form-control" type="date" name="startedprojectyear1" id="startedprojectyear1">
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="endingprojectyear1">End Date</label>
+                            <input class="form-control" type="date" name="endingprojectyear1" id="endingprojectyear1">
+                        </div>
+
+                        <div class="col-12">
+                            <textarea class="form-control" name="shortdescriptionofprojectdone1"
+                                id="shortdescriptionofprojectdone1" cols="30" rows="10"
+                                placeholder="Short Description of project"></textarea>
+                        </div>
                     </div>
 
-                    <div class="col-md-6">
-                        Start Date
-                        <input class="form-control" type="date" name="startedprojectyear1" id="startedprojectyear1">
-                    </div>
-
-                    <div class="col-md-6">
-                        End Date
-                        <input class="form-control" type="date" name="endingprojectyear1" id="endingprojectyear1">
-                    </div>
-
-                    <div class="mb-3">
-                        <textarea class="form-control" name="shortdescriptionofprojectdone1"
-                            id="shortdescriptionofprojectdone1" cols="30" rows="10"
-                            placeholder="Short Description of project"></textarea>
-                    </div>
                 </div>
 
 
+                <br>
                 <div>
                     <input class="btn btn-outline-success btn-sm" type="button" id="btnAddproject"
                         value="Add Another Project" />
@@ -284,31 +303,36 @@
 
             <!-- Div for Certifications -->
 
-            <div class="row g-3">
+            <div>
                 <br>
                 <br>
                 <h2 class="display-6">Certifications</h2>
 
                 <div id="clonedcertificate1" class="clonedcertificate">
-                    <div class="mb-3">
-                        Course Name
-                        <input class="form-control" type="text" name="coursename1" id="coursename1"
-                            placeholder="e.g. SQL">
+                    <div class="row g-3">
+                        <div class="col-12">
+                            <label for="coursename1">Course Name</label>
+                            <input class="form-control" type="text" name="coursename1" id="coursename1"
+                                placeholder="e.g. SQL">
+                        </div>
+
+                        <div class="col-12">
+                            <label for="courseorganization1">Issuing Organization</label>
+                            <input class="form-control" type="text" name="courseorganization1" id="courseorganization1"
+                                placeholder="e.g. Udemy">
+                        </div>
+
+                        <div class="col-12">
+                            <label for="certificateissuedate1">Issue Date</label>
+                            <input class="form-control" type="date" name="certificateissuedate1"
+                                id="certificateissuedate1">
+                        </div>
                     </div>
 
-                    <div class="mb-3">
-                        Issuing Organization
-                        <input class="form-control" type="text" name="courseorganization1" id="courseorganization1"
-                            placeholder="e.g. Udemy">
-                    </div>
-
-                    <div class="mb-3">
-                        Issue Date
-                        <input class="form-control" type="date" name="certificateissuedate1" id="certificateissuedate1">
-                    </div>
 
                 </div>
 
+                <br>
                 <div>
                     <input class="btn btn-outline-success btn-sm" type="button" id="btnAddcertificate"
                         value="Add Another certificate" />
@@ -375,10 +399,8 @@
 
             </div>
 
-
-
             <!-- Div for Registration Button -->
-
+            <br>
             <div>
                 <button class="btn btn-primary">Register</button>
             </div>

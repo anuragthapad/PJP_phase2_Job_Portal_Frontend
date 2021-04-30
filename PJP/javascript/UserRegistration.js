@@ -9,12 +9,18 @@ $(document).ready(function () {
 
         var newSection = $('#clonedqual' + num).clone().attr('id', 'clonedqual' + newNum);
 
-        newSection.children(':first').children(':first').attr('id', 'institutename' + newNum).attr('name', 'institutename' + newNum);
-        newSection.children(':nth-child(2)').children(':first').attr('id', 'startedstudyingyear' + newNum).attr('name', 'startedstudyingyear' + newNum);
-        newSection.children(':nth-child(3)').children(':first').attr('id', 'endingstudyingyear' + newNum).attr('name', 'endingstudyingyear' + newNum);
-        newSection.children(':nth-child(4)').children(':first').attr('id', 'degree' + newNum).attr('name', 'degree' + newNum);
-        newSection.children(':nth-child(5)').children(':first').attr('id', 'stream' + newNum).attr('name', 'stream' + newNum);
-        newSection.children(':nth-child(6)').children(':first').attr('id', 'percentage' + newNum).attr('name', 'percentage' + newNum);
+        newSection.children(':first').children(':first').children(':first').attr('for', 'institutename' + newNum);
+        newSection.children(':first').children(':first').children(':nth-child(2)').attr('id', 'institutename' + newNum).attr('name', 'institutename' + newNum);
+        newSection.children(':first').children(':nth-child(2)').children(':first').attr('for', 'startedstudyingyear' + newNum);
+        newSection.children(':first').children(':nth-child(2)').children(':nth-child(2)').attr('id', 'startedstudyingyear' + newNum).attr('name', 'startedstudyingyear' + newNum);
+        newSection.children(':first').children(':nth-child(3)').children(':first').attr('for', 'endingstudyingyear' + newNum);
+        newSection.children(':first').children(':nth-child(3)').children(':nth-child(2)').attr('id', 'endingstudyingyear' + newNum).attr('name', 'endingstudyingyear' + newNum);
+        newSection.children(':first').children(':nth-child(4)').children(':first').attr('for', 'degree' + newNum);
+        newSection.children(':first').children(':nth-child(4)').children(':nth-child(2)').attr('id', 'degree' + newNum).attr('name', 'degree' + newNum);
+        newSection.children(':first').children(':nth-child(5)').children(':first').attr('for', 'stream' + newNum);
+        newSection.children(':first').children(':nth-child(5)').children(':nth-child(2)').attr('id', 'stream' + newNum).attr('name', 'stream' + newNum);
+        newSection.children(':first').children(':nth-child(6)').children(':first').attr('for', 'percentage' + newNum);
+        newSection.children(':first').children(':nth-child(6)').children(':nth-child(2)').attr('id', 'percentage' + newNum).attr('name', 'percentage' + newNum);
 
 
         $('.clonedqual').last().append(newSection)
@@ -56,6 +62,7 @@ $(document).ready(function () {
 $(document).ready(function () {
 
     endingstudyingyear1.max = new Date().toISOString().split("T")[0];
+    startedstudyingyear1.max = new Date().toISOString().split("T")[0];
     document.getElementById("startedstudyingyear1").onchange = function () {
         var input = document.getElementById("endingstudyingyear1");
         input.setAttribute("min", this.value);
@@ -65,6 +72,7 @@ $(document).ready(function () {
 $(document).ready(function () {
 
     startedstudyingyear1.min = "1960-01-01";
+    endingstudyingyear1.min = "1960-01-01";
     document.getElementById("endingstudyingyear1").onchange = function () {
         var input = document.getElementById("startedstudyingyear1");
         input.setAttribute("max", this.value);
@@ -82,7 +90,8 @@ $(document).ready(function () {
 
         var newSection = $('#clonedskill' + num).clone().attr('id', 'clonedskill' + newNum);
 
-        newSection.children(':first').children(':first').attr('id', 'skill' + newNum).attr('name', 'skill' + newNum);
+        newSection.children(':first').children(':first').children(':first').attr('for', 'skill' + newNum);
+        newSection.children(':first').children(':first').children(':nth-child(2)').attr('id', 'skill' + newNum).attr('name', 'skill' + newNum);
 
         $('.clonedskill').last().append(newSection)
 
@@ -118,12 +127,18 @@ $(document).ready(function () {
 
         var newSection = $('#clonedwork' + num).clone().attr('id', 'clonedwork' + newNum);
 
-        newSection.children(':first').children(':first').attr('id', 'role' + newNum).attr('name', 'role' + newNum);
-        newSection.children(':nth-child(2)').children(':first').attr('id', 'organization' + newNum).attr('name', 'organization' + newNum);
-        newSection.children(':nth-child(3)').children(':first').attr('id', 'workedlocation' + newNum).attr('name', 'workedlocation' + newNum);
-        newSection.children(':nth-child(4)').children(':first').attr('id', 'startedworkingyear' + newNum).attr('name', 'startedworkingyear' + newNum);
-        newSection.children(':nth-child(5)').children(':first').attr('id', 'endingworkingyear' + newNum).attr('name', 'endingworkingyear' + newNum);
-        newSection.children(':nth-child(6)').children(':first').attr('id', 'shortdescriptionofworkdone' + newNum).attr('name', 'shortdescriptionofworkdone' + newNum);
+        newSection.children(':first').children(':first').children(':first').attr('for', 'role' + newNum);
+        newSection.children(':first').children(':first').children(':nth-child(2)').attr('id', 'role' + newNum).attr('name', 'role' + newNum);
+        newSection.children(':first').children(':nth-child(2)').children(':first').attr('for', 'organization' + newNum);
+        newSection.children(':first').children(':nth-child(2)').children(':nth-child(2)').attr('id', 'organization' + newNum).attr('name', 'organization' + newNum);
+        newSection.children(':first').children(':nth-child(3)').children(':first').attr('for', 'workedlocation' + newNum);
+        newSection.children(':first').children(':nth-child(3)').children(':nth-child(2)').attr('id', 'workedlocation' + newNum).attr('name', 'workedlocation' + newNum);
+        newSection.children(':first').children(':nth-child(4)').children(':first').attr('for', 'startedworkingyear' + newNum);
+        newSection.children(':first').children(':nth-child(4)').children(':nth-child(2)').attr('id', 'startedworkingyear' + newNum).attr('name', 'startedworkingyear' + newNum);
+        newSection.children(':first').children(':nth-child(5)').children(':first').attr('for', 'endingworkingyear' + newNum);
+        newSection.children(':first').children(':nth-child(5)').children(':nth-child(2)').attr('id', 'endingworkingyear' + newNum).attr('name', 'endingworkingyear' + newNum);
+        newSection.children(':first').children(':nth-child(6)').children(':first').attr('for', 'shortdescriptionofworkdone' + newNum);
+        newSection.children(':first').children(':nth-child(6)').children(':nth-child(2)').attr('id', 'shortdescriptionofworkdone' + newNum).attr('name', 'shortdescriptionofworkdone' + newNum);
 
 
         $('.clonedwork').last().append(newSection)
@@ -164,6 +179,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     endingworkingyear1.max = new Date().toISOString().split("T")[0];
+    startedworkingyear1.max = new Date().toISOString().split("T")[0];
     document.getElementById("startedworkingyear1").onchange = function () {
         var input = document.getElementById("endingworkingyear1");
         input.setAttribute("min", this.value);
@@ -172,6 +188,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     startedworkingyear1.min = "1960-01-01";
+    endingworkingyear1.min = "1960-01-01";
     document.getElementById("endingworkingyear1").onchange = function () {
         var input = document.getElementById("startedworkingyear1");
         input.setAttribute("max", this.value);
@@ -188,10 +205,14 @@ $(document).ready(function () {
 
         var newSection = $('#clonedproject' + num).clone().attr('id', 'clonedproject' + newNum);
 
-        newSection.children(':first').children(':first').attr('id', 'projecttitle' + newNum).attr('name', 'projecttitle' + newNum);
-        newSection.children(':nth-child(2)').children(':first').attr('id', 'startedprojectyear' + newNum).attr('name', 'startedprojectyear' + newNum);
-        newSection.children(':nth-child(3)').children(':first').attr('id', 'endingprojectyear' + newNum).attr('name', 'endingprojectyear' + newNum);
-        newSection.children(':nth-child(4)').children(':first').attr('id', 'shortdescriptionofprojectdone' + newNum).attr('name', 'shortdescriptionofprojectdone' + newNum);
+        newSection.children(':first').children(':first').children(':first').attr('for', 'projecttitle' + newNum);
+        newSection.children(':first').children(':first').children(':nth-child(2)').attr('id', 'projecttitle' + newNum).attr('name', 'projecttitle' + newNum);
+        newSection.children(':first').children(':nth-child(2)').children(':first').attr('for', 'startedprojectyear' + newNum);
+        newSection.children(':first').children(':nth-child(2)').children(':nth-child(2)').attr('id', 'startedprojectyear' + newNum).attr('name', 'startedprojectyear' + newNum);
+        newSection.children(':first').children(':nth-child(3)').children(':first').attr('for', 'endingprojectyear' + newNum);
+        newSection.children(':first').children(':nth-child(3)').children(':nth-child(2)').attr('id', 'endingprojectyear' + newNum).attr('name', 'endingprojectyear' + newNum);
+        newSection.children(':first').children(':nth-child(4)').children(':first').attr('for', 'shortdescriptionofprojectdone' + newNum);
+        newSection.children(':first').children(':nth-child(4)').children(':nth-child(2)').attr('id', 'shortdescriptionofprojectdone' + newNum).attr('name', 'shortdescriptionofprojectdone' + newNum);
 
 
         $('.clonedproject').last().append(newSection)
@@ -232,6 +253,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     endingprojectyear1.max = new Date().toISOString().split("T")[0];
+    startedprojectyear1.max = new Date().toISOString().split("T")[0];
     document.getElementById("startedprojectyear1").onchange = function () {
         var input = document.getElementById("endingprojectyear1");
         input.setAttribute("min", this.value);
@@ -240,6 +262,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     startedprojectyear1.min = "1960-01-01";
+    endingprojectyear1.min = "1960-01-01";
     document.getElementById("endingprojectyear1").onchange = function () {
         var input = document.getElementById("startedprojectyear1");
         input.setAttribute("max", this.value);
@@ -255,9 +278,12 @@ $(document).ready(function () {
 
         var newSection = $('#clonedcertificate' + num).clone().attr('id', 'clonedcertificate' + newNum);
 
-        newSection.children(':first').children(':first').attr('id', 'coursename' + newNum).attr('name', 'coursename' + newNum);
-        newSection.children(':nth-child(2)').children(':first').attr('id', 'courseorganization' + newNum).attr('name', 'courseorganization' + newNum);
-        newSection.children(':nth-child(3)').children(':first').attr('id', 'certificateissuedate' + newNum).attr('name', 'certificateissuedate' + newNum);
+        newSection.children(':first').children(':first').children(':first').attr('for', 'coursename' + newNum);
+        newSection.children(':first').children(':first').children(':nth-child(2)').attr('id', 'coursename' + newNum).attr('name', 'coursename' + newNum);
+        newSection.children(':first').children(':nth-child(2)').children(':first').attr('for', 'courseorganization' + newNum);
+        newSection.children(':first').children(':nth-child(2)').children(':nth-child(2)').attr('id', 'courseorganization' + newNum).attr('name', 'courseorganization' + newNum);
+        newSection.children(':first').children(':nth-child(3)').children(':first').attr('for', 'certificateissuedate' + newNum);
+        newSection.children(':first').children(':nth-child(3)').children(':nth-child(2)').attr('id', 'certificateissuedate' + newNum).attr('name', 'certificateissuedate' + newNum);
 
 
         $('.clonedcertificate').last().append(newSection)
