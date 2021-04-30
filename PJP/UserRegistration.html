@@ -15,7 +15,7 @@
     <section>
         <h1>User Registration Form</h1>
 
-        
+
 
         <form action="index.html">
 
@@ -52,6 +52,22 @@
                 </div>
 
                 <div>
+                    <label for="myPwd1">Enter Password</label>
+                    <input class="text" id="myPwd1" type="password"
+                        title="Password must contain at least 6 characters, including UPPER/lowercase and numbers."
+                        required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" name="pwd1" placeholder="Password">
+                    <p id="user_pwd1"></p>
+                </div>
+
+                <div>
+                    <label for="myPwd2">Re-Enter Password</label>
+                    <input class="text" type="password" title="Please enter the same Password as above." id="myPwd2"
+                        required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" name="pwd1"
+                        placeholder="Confirm Password">
+                    <p id="user_pwd2"></p>
+                </div>
+
+                <div>
                     <label for="phone">Phone</label>
                     <input type="tel" name="phone" id="phone" minlength="10" maxlength="10"
                         placeholder="Enter 10 Digit Number" pattern="[0-9]{10}" required>
@@ -69,7 +85,7 @@
                 </div>
             </div>
 
-            
+
 
             <!-- Div for Qualification Details -->
 
@@ -114,7 +130,7 @@
                 </div>
             </div>
 
-           
+
 
             <!-- Div for Skills -->
 
@@ -132,7 +148,7 @@
                 </div>
             </div>
 
-          
+
 
             <!-- Div for Work Experience -->
 
@@ -176,7 +192,7 @@
                 </div>
             </div>
 
-          
+
 
             <!-- Div for Project Details -->
 
@@ -214,7 +230,7 @@
 
             </div>
 
-           
+
 
             <!-- Div for Certifications -->
 
@@ -246,7 +262,7 @@
 
             </div>
 
-           
+
 
             <!-- Div for Awards and Achievements -->
 
@@ -260,7 +276,7 @@
 
             </div>
 
-            
+
 
             <!-- Div for Others -->
 
@@ -295,7 +311,7 @@
 
             </div>
 
-            
+
 
             <!-- Div for Registration Button -->
 
