@@ -5,35 +5,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/bootstrap.css">
     <link rel="stylesheet" href="static/UserRegistration.css">
-    <script src="http://code.jquery.com/jquery-3.6.0.js" type="text/javascript"></script>
-    <script src="javascript/UserRegistration.js"></script>
     <title>User Registration form</title>
 </head>
 
 <body>
-    <section>
-        <h1>User Registration Form</h1>
+    <header>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark nav-bg-color">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">Job Portal</a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="container">
+        <h1 class="display-5">User Registration Form</h1>
 
 
 
         <form action="index.html">
-
             <!-- Div for Personal Details -->
 
-            <div>
-                <h2>Personal Details</h2>
-                <div>
-                    <label for="firstname">First Name</label>
-                    <input type="text" name="firstname" id="firstname" placeholder="First Name" required>
-
-                    <label for="lastname">Last Name</label>
-                    <input type="text" name="lastname" id="lastname" placeholder="Last Name" required>
+            <div class="row g-3">
+                <br>
+                <br>
+                <h2 class="display-6">Personal Details</h2>
+                <div class="col-md-6">
+                    <label class="form-label" for="firstname">First Name</label>
+                    <input class="form-control" type="text" name="firstname" id="firstname" placeholder="First Name"
+                        required>
                 </div>
 
-                <div>
-                    <label for="gender">Gender</label>
-                    <select name="gender" id="gender">
+                <div class="col-md-6">
+                    <label class="form-label" for="lastname">Last Name</label>
+                    <input class="form-control" type="text" name="lastname" id="lastname" placeholder="Last Name"
+                        required>
+                </div>
+
+                <div class="col-12">
+                    <label class="form-label" for="gender">Gender</label>
+                    <select class="form-select" name="gender" id="gender">
                         <option value="">Select</option>
                         <option value="prefernottosay">Prefer not to say</option>
                         <option value="male">Male</option>
@@ -41,47 +67,49 @@
                     </select>
                 </div>
 
-                <div>
-                    <label for="dob">Date of Birth</label>
-                    <input type="date" name="dob" id="dob" required>
+                <div class="col-12">
+                    <label class="form-label" for="dob">Date of Birth</label>
+                    <input class="form-control" type="date" name="dob" id="dob" required>
                 </div>
 
-                <div>
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email" placeholder="Email" required>
+                <div class="col-12">
+                    <label class="form-label" for="email">Email</label>
+                    <input class="form-control" type="email" name="email" id="email" placeholder="Email" required>
                 </div>
 
-                <div>
-                    <label for="myPwd1">Enter Password</label>
-                    <input class="text" id="myPwd1" type="password"
+                <div class="col-md-6">
+                    <label class="form-label" for="myPwd1">Enter Password</label>
+                    <input class="form-control" id="myPwd1" type="password"
                         title="Password must contain at least 6 characters, including UPPER/lowercase and numbers."
                         required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" name="pwd1" placeholder="Password">
                     <p id="user_pwd1"></p>
                 </div>
 
-                <div>
-                    <label for="myPwd2">Re-Enter Password</label>
-                    <input class="text" type="password" title="Please enter the same Password as above." id="myPwd2"
-                        required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" name="pwd1"
-                        placeholder="Confirm Password">
+                <div class="col-md-6">
+                    <label class="form-label" for="myPwd2">Re-Enter Password</label>
+                    <input class="form-control" class="text" type="password"
+                        title="Please enter the same Password as above." id="myPwd2" required
+                        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" name="pwd1" placeholder="Confirm Password">
                     <p id="user_pwd2"></p>
                 </div>
 
-                <div>
-                    <label for="phone">Phone</label>
-                    <input type="tel" name="phone" id="phone" minlength="10" maxlength="10"
+                <div class="col-12">
+                    <label class="form-label" for="phone">Phone</label>
+                    <input class="form-control" type="tel" name="phone" id="phone" minlength="10" maxlength="10"
                         placeholder="Enter 10 Digit Number" pattern="[0-9]{10}" required>
                     <span class="telvalidity"></span>
                 </div>
 
-                <div>
-                    <label for="yearsofexp">Years of Experience</label>
-                    <input type="number" name="yearsofexp" id="yearsofexp" min="0" max="55" required>
+                <div class="col-12">
+                    <label class="form-label" for="yearsofexp">Years of Experience</label>
+                    <input class="form-control" type="number" name="yearsofexp" id="yearsofexp" min="0" max="55"
+                        required>
                 </div>
 
-                <div>
-                    <label for="profilepic">Profile Picture</label>
-                    <input type="file" name="profilepic" id="profilepic" accept="image/*">
+                <div class="col-12">
+                    <label class="form-label" for="profilepic">Profile Picture</label>
+                    <input class="form-control form-control-sm" type="file" name="profilepic" id="profilepic"
+                        accept="image/*">
                 </div>
             </div>
 
@@ -89,44 +117,50 @@
 
             <!-- Div for Qualification Details -->
 
-            <div>
-                <h2>Qualification Details</h2>
+            <div class="row g-3">
+                <br>
+                <br>
+                <h2 class="display-6">Qualification Details</h2>
 
                 <div id="clonedqual1" class="clonedqual">
-                    <div>
+                    <div class="mb-3">
                         Institute Name
-                        <input type="text" name="institutename1" id="institutename1" placeholder="Institute Name">
+                        <input class="form-control" type="text" name="institutename1" id="institutename1"
+                            placeholder="Institute Name">
                     </div>
 
-                    <div class="date">
+                    <div class="col-md-6">
                         Start Date
-                        <input type="date" name="startedstudyingyear1" id="startedstudyingyear1">
+                        <input class="form-control" type="date" name="startedstudyingyear1" id="startedstudyingyear1">
                     </div>
 
-                    <div class="date">
+                    <div class="col-md-6">
                         End Date
-                        <input type="date" name="endingstudyingyear1" id="endingstudyingyear1">
+                        <input class="form-control" type="date" name="endingstudyingyear1" id="endingstudyingyear1">
                     </div>
 
-                    <div>
+                    <div class="mb-3">
                         Degree
-                        <input type="text" name="degree1" id="degree1" placeholder="e.g. B.Tech">
+                        <input class="form-control" type="text" name="degree1" id="degree1" placeholder="e.g. B.Tech">
                     </div>
 
-                    <div>
+                    <div class="mb-3">
                         Stream
-                        <input type="text" name="stream1" id="stream1" placeholder="e.g. Computer Science">
+                        <input class="form-control" type="text" name="stream1" id="stream1"
+                            placeholder="e.g. Computer Science">
                     </div>
 
-                    <div>
+                    <div class="mb-3">
                         Percentage
-                        <input type="number" name="percentage1" id="percentage1" min="0" max="100">
+                        <input class="form-control" type="number" name="percentage1" id="percentage1" min="0" max="100">
                     </div>
                 </div>
 
                 <div>
-                    <input type="button" id="btnAddqual" value="Add Another Qualification" />
-                    <input type="button" id="btnDelqual" value="Remove Qualification" />
+                    <input class="btn btn-outline-success btn-sm" type="button" id="btnAddqual"
+                        value="Add Another Qualification" />
+                    <input class="btn btn-outline-danger btn-sm" type="button" id="btnDelqual"
+                        value="Remove Qualification" />
                 </div>
             </div>
 
@@ -134,17 +168,20 @@
 
             <!-- Div for Skills -->
 
-            <div>
-                <h2>Skills</h2>
+            <div class="row g-3">
+                <br>
+                <br>
+                <h2 class="display-6">Skills</h2>
                 <div id="clonedskill1" class="clonedskill">
-                    <div>
-                        Skill: <input type='text' name='skill1' id='skill1' />
+                    <div class="mb-3">
+                        Skill: <input class="form-control" type='text' name='skill1' id='skill1' />
                     </div>
                 </div>
 
                 <div>
-                    <input type="button" id="btnAddskill" value="Add Another Skill" />
-                    <input type="button" id="btnDelskill" value="Remove Skill" />
+                    <input class="btn btn-outline-success btn-sm" type="button" id="btnAddskill"
+                        value="Add Another Skill" />
+                    <input class="btn btn-outline-danger btn-sm" type="button" id="btnDelskill" value="Remove Skill" />
                 </div>
             </div>
 
@@ -152,43 +189,51 @@
 
             <!-- Div for Work Experience -->
 
-            <div>
-                <h2>Work Experience</h2>
+            <div class="row g-3">
+                <br>
+                <br>
+                <h2 class="display-6">Work Experience</h2>
                 <div id="clonedwork1" class="clonedwork">
-                    <div>
+                    <div class="mb-3">
                         Role
-                        <input type="text" name="role1" id="role1" placeholder="e.g. Web Developer">
+                        <input class="form-control" type="text" name="role1" id="role1"
+                            placeholder="e.g. Web Developer">
                     </div>
 
-                    <div>
+                    <div class="mb-3">
                         Organization
-                        <input type="text" name="organization1" id="organization1" placeholder="e.g. Publicis Sapient">
+                        <input class="form-control" type="text" name="organization1" id="organization1"
+                            placeholder="e.g. Publicis Sapient">
                     </div>
 
-                    <div>
+                    <div class="mb-3">
                         Location
-                        <input type="text" name="workedlocation1" id="workedlocation1" placeholder="e.g. Bangalore">
+                        <input class="form-control" type="text" name="workedlocation1" id="workedlocation1"
+                            placeholder="e.g. Bangalore">
                     </div>
 
-                    <div class="date">
+                    <div class="col-md-6">
                         Start Date
-                        <input type="date" name="startedworkingyear1" id="startedworkingyear1">
+                        <input class="form-control" type="date" name="startedworkingyear1" id="startedworkingyear1">
                     </div>
 
-                    <div class="date">
+                    <div class="col-md-6">
                         End Date
-                        <input type="date" name="endingworkingyear1" id="endingworkingyear1">
+                        <input class="form-control" type="date" name="endingworkingyear1" id="endingworkingyear1">
                     </div>
 
-                    <div>
-                        <textarea name="shortdescriptionofworkdone1" id="shortdescriptionofworkdone1" cols="30"
-                            rows="10" placeholder="Short Description of work done"></textarea>
+                    <div class="mb-3">
+                        <textarea class="form-control" name="shortdescriptionofworkdone1"
+                            id="shortdescriptionofworkdone1" cols="30" rows="10"
+                            placeholder="Short Description of work done"></textarea>
                     </div>
                 </div>
 
                 <div>
-                    <input type="button" id="btnAddwork" value="Add Another Experience" />
-                    <input type="button" id="btnDelwork" value="Remove Experience" />
+                    <input class="btn btn-outline-success btn-sm" type="button" id="btnAddwork"
+                        value="Add Another Experience" />
+                    <input class="btn btn-outline-danger btn-sm" type="button" id="btnDelwork"
+                        value="Remove Experience" />
                 </div>
             </div>
 
@@ -196,36 +241,41 @@
 
             <!-- Div for Project Details -->
 
-            <div>
-                <h2>Project Details</h2>
+            <div class="row g-3">
+                <br>
+                <br>
+                <h2 class="display-6">Project Details</h2>
 
                 <div id="clonedproject1" class="clonedproject">
-                    <div>
+                    <div class="mb-3">
                         Title
-                        <input type="text" name="projecttitle1" id="projecttitle1"
+                        <input class="form-control" type="text" name="projecttitle1" id="projecttitle1"
                             placeholder="e.g. Job Registration Protal">
                     </div>
 
-                    <div class="date">
+                    <div class="col-md-6">
                         Start Date
-                        <input type="date" name="startedprojectyear1" id="startedprojectyear1">
+                        <input class="form-control" type="date" name="startedprojectyear1" id="startedprojectyear1">
                     </div>
 
-                    <div class="date">
+                    <div class="col-md-6">
                         End Date
-                        <input type="date" name="endingprojectyear1" id="endingprojectyear1">
+                        <input class="form-control" type="date" name="endingprojectyear1" id="endingprojectyear1">
                     </div>
 
-                    <div>
-                        <textarea name="shortdescriptionofprojectdone1" id="shortdescriptionofprojectdone1" cols="30"
-                            rows="10" placeholder="Short Description of project"></textarea>
+                    <div class="mb-3">
+                        <textarea class="form-control" name="shortdescriptionofprojectdone1"
+                            id="shortdescriptionofprojectdone1" cols="30" rows="10"
+                            placeholder="Short Description of project"></textarea>
                     </div>
                 </div>
 
 
                 <div>
-                    <input type="button" id="btnAddproject" value="Add Another Project" />
-                    <input type="button" id="btnDelproject" value="Remove project" />
+                    <input class="btn btn-outline-success btn-sm" type="button" id="btnAddproject"
+                        value="Add Another Project" />
+                    <input class="btn btn-outline-danger btn-sm" type="button" id="btnDelproject"
+                        value="Remove project" />
                 </div>
 
             </div>
@@ -234,30 +284,36 @@
 
             <!-- Div for Certifications -->
 
-            <div>
-                <h2>Certifications</h2>
+            <div class="row g-3">
+                <br>
+                <br>
+                <h2 class="display-6">Certifications</h2>
 
                 <div id="clonedcertificate1" class="clonedcertificate">
-                    <div>
+                    <div class="mb-3">
                         Course Name
-                        <input type="text" name="coursename1" id="coursename1" placeholder="e.g. SQL">
+                        <input class="form-control" type="text" name="coursename1" id="coursename1"
+                            placeholder="e.g. SQL">
                     </div>
 
-                    <div>
+                    <div class="mb-3">
                         Issuing Organization
-                        <input type="text" name="courseorganization1" id="courseorganization1" placeholder="e.g. Udemy">
+                        <input class="form-control" type="text" name="courseorganization1" id="courseorganization1"
+                            placeholder="e.g. Udemy">
                     </div>
 
-                    <div>
+                    <div class="mb-3">
                         Issue Date
-                        <input type="date" name="certificateissuedate1" id="certificateissuedate1">
+                        <input class="form-control" type="date" name="certificateissuedate1" id="certificateissuedate1">
                     </div>
 
                 </div>
 
                 <div>
-                    <input type="button" id="btnAddcertificate" value="Add Another certificate" />
-                    <input type="button" id="btnDelcertificate" value="Remove certificate" />
+                    <input class="btn btn-outline-success btn-sm" type="button" id="btnAddcertificate"
+                        value="Add Another certificate" />
+                    <input class="btn btn-outline-danger btn-sm" type="button" id="btnDelcertificate"
+                        value="Remove certificate" />
                 </div>
 
             </div>
@@ -267,11 +323,13 @@
             <!-- Div for Awards and Achievements -->
 
             <div>
-                <h2>Awards and Achievments</h2>
+                <br>
+                <br>
+                <h2 class="display-6">Awards and Achievments</h2>
                 <p>Add your accomplishments such as rewards, recognitions, test scores, certifications, etc. here.</p>
-                <div>
-                    <textarea name="descriptionofaccomplishments" id="descriptionofaccomplishments" cols="30" rows="10"
-                        placeholder="e.g. Achieved Expert level in CodeForces"></textarea>
+                <div class="mb-3">
+                    <textarea class="form-control" name="descriptionofaccomplishments" id="descriptionofaccomplishments"
+                        cols="30" rows="10" placeholder="e.g. Achieved Expert level in CodeForces"></textarea>
                 </div>
 
             </div>
@@ -280,20 +338,12 @@
 
             <!-- Div for Others -->
 
-            <div>
-                <h2>Others</h2>
-                <div>
-                    <label for="locationpreference">Location Preference</label>
-                    <select name="locationpreference" id="locationpreference" required>
-                        <option value="">Select</option>
-                        <option value="bangalore">Bangalore</option>
-                        <option value="hyderabad">Hyderabad</option>
-                        <option value="gurugram">Gurugram</option>
-                        <option value="mumbai">Mumbai</option>
-                    </select>
-                </div>
+            <div class="row g-3">
+                <br>
+                <br>
+                <h2 class="display-6">Others</h2>
 
-                <div>
+                <div class="col-12">
                     <p>Relocate: <label for="yesrelocate">Yes</label>
                         <input type="radio" name="relocate" id="yesrelocate" value="yes" required>
 
@@ -304,9 +354,23 @@
 
                 </div>
 
-                <div>
-                    <label for="salaryexp">Salary Expectation</label>
-                    <input type="number" name="salaryexp" id="salaryexp" min="0" max="1000000000" required>
+                <div class="col-md-6">
+                    <label class="form-label" for="locationpreference">Location Preference</label>
+                    <select class="form-select" name="locationpreference" id="locationpreference" required>
+                        <option value="">Select</option>
+                        <option value="bangalore">Bangalore</option>
+                        <option value="hyderabad">Hyderabad</option>
+                        <option value="gurugram">Gurugram</option>
+                        <option value="mumbai">Mumbai</option>
+                    </select>
+                </div>
+
+
+
+                <div class="col-md-6">
+                    <label class="form-label" for="salaryexp">Salary Expectation</label>
+                    <input class="form-select" type="number" name="salaryexp" id="salaryexp" min="0" max="1000000000"
+                        required>
                 </div>
 
             </div>
@@ -316,11 +380,13 @@
             <!-- Div for Registration Button -->
 
             <div>
-                <button>Register</button>
+                <button class="btn btn-primary">Register</button>
             </div>
 
         </form>
     </section>
+    <script src="http://code.jquery.com/jquery-3.6.0.js" type="text/javascript"></script>
+    <script src="javascript/UserRegistration.js"></script>
 </body>
 
 </html>
