@@ -240,7 +240,7 @@ input[type="password"] {
 }
 #user_val {
   text-align: left;
-  color: yellow;
+  color: red;
 }
 input.email,
 input.text.logINlpass {
