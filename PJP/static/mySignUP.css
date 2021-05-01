@@ -1,83 +1,4 @@
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-dl,
-dt,
-dd,
-ol,
-nav ul,
-nav li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, dl, dt, dd, ol, nav ul, nav li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
     margin: 0;
     padding: 0;
     border: 0;
@@ -87,7 +8,7 @@ video {
 }
 
 .nav-bg-color {
-    background-color: #0f4869 !important;
+    background-color: #0f4869;
     padding-left: 2%;
     padding-right: 2%;
     display: block;
@@ -109,7 +30,6 @@ h1 {
     letter-spacing: 4px;
     font-family: 'Roboto', sans-serif;
 }
-
 
 /*-- main --*/
 
@@ -134,9 +54,7 @@ h1 {
     background-color: #1a5f87;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="password"] {
+input[type="text"], input[type="email"], input[type="password"] {
     font-size: 0.9em;
     color: #fff;
     font-weight: 100;
@@ -156,21 +74,13 @@ input[type="password"] {
     font-family: 'Roboto', sans-serif;
 }
 
-user_val {
-    text-align: left;
-    color: yellow;
-    font-family: 'Roboto', sans-serif;
-}
-
-.text:focus,
-.text:valid {
+.text:focus, .text:valid {
     box-shadow: none;
     outline: none;
     background-position: 0 0;
 }
 
-.text:focus::-webkit-input-placeholder,
-.text:valid::-webkit-input-placeholder {
+.text:focus::-webkit-input-placeholder, .text:valid::-webkit-input-placeholder {
     color: rgba(255, 255, 255, 0.7);
     font-size: .9em;
     -webkit-transform: translateY(-30px);
@@ -210,7 +120,6 @@ input[type="submit"]:hover {
     background: #8DC26F;
 }
 
-
 /*Dont Have an Acc*/
 
 .agileits-top p {
@@ -220,7 +129,6 @@ input[type="submit"]:hover {
     letter-spacing: 1px;
     font-weight: 300;
 }
-
 
 /*Create Acc*/
 
@@ -236,18 +144,14 @@ input[type="submit"]:hover {
     color: #76b852;
 }
 
-
 /*-- //main --*/
 
-
 /*-- checkbox --*/
-
 
 /*-- responsive-design --*/
 
 @media(max-width:1440px) {
-    input[type="text"],
-    input[type="email"] {
+    input[type="text"], input[type="email"] {
         width: 95%;
     }
 }
@@ -298,9 +202,7 @@ input[type="submit"]:hover {
     .main-agileinfo {
         width: 58%;
     }
-    input[type="text"],
-    input[type="email"],
-    input[type="password"] {
+    input[type="text"], input[type="email"], input[type="password"] {
         width: 93%;
     }
 }
@@ -327,8 +229,7 @@ input[type="submit"]:hover {
     .agileits-top {
         padding: 2.2em;
     }
-    input.email,
-    input.text.logINlpass {
+    input.email, input.text.logINlpass {
         margin: 1.5em 0;
     }
     input[type="submit"] {
@@ -357,8 +258,7 @@ input[type="submit"]:hover {
     .agileits-top {
         padding: 1.8em;
     }
-    input[type="text"],
-    input[type="email"] {
+    input[type="text"], input[type="email"] {
         width: 91%;
     }
     .agileits-top p {
@@ -375,12 +275,10 @@ input[type="submit"]:hover {
         width: 85%;
         margin: 1.5em auto;
     }
-    .text:focus,
-    .text:valid {
+    .text:focus, .text:valid {
         background-position: 0 0px;
     }
-    .wthree-text ul li,
-    .wthree-text ul li:nth-child(2) {
+    .wthree-text ul li, .wthree-text ul li:nth-child(2) {
         display: block;
         float: none;
     }
@@ -424,9 +322,7 @@ input[type="submit"]:hover {
     .colorlibcopy-agile {
         margin: 0 0 1em;
     }
-    input[type="text"],
-    input[type="email"],
-    input[type="password"] {
+    input[type="text"], input[type="email"], input[type="password"] {
         width: 89.5%;
         font-size: 0.85em;
     }
@@ -438,8 +334,7 @@ input[type="submit"]:hover {
         width: 92%;
         margin: 1em auto;
     }
-    .text:focus,
-    .text:valid {
+    .text:focus, .text:valid {
         background-position: 0 0px;
     }
     input[type="submit"] {

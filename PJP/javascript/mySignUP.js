@@ -1,36 +1,3 @@
-function startWithU(targ) {
-	if ((targ.startsWith("u", 0) || targ.startsWith("U", 0)) == true) {
-		return true;
-	}
-	else return false;
-
-};
-
-function startWithA(targ) {
-	if ((targ.startsWith("a", 0) || targ.startsWith("A", 0)) == true) {
-		return true;
-	}
-	else return false;
-
-};
-function validateform(form) {
-	var temp = document.getElementById("user_id").value;
-	if (temp.length < 8) {
-		document.getElementById("user_val").innerHTML = "Error : Enter 8 character User ID.";
-		document.getElementById("SignUP_form").reset();
-		return false;
-
-	}
-	var sU = startWithU(temp);
-	var sA = startWithA(temp);
-	if ((sU || sA) == false) {
-		document.getElementById("user_val").innerHTML = "Error : User ID must start with U or A.";
-		document.getElementById("SignUP_form").reset();
-		return false;
-	}
-
-};
-
 document.addEventListener("DOMContentLoaded", function () {
 	if (!RegExp.escape) {
 		RegExp.escape = function (s) {
