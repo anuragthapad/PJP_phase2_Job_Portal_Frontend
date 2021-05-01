@@ -1,3 +1,11 @@
+#indexh2{
+  color: white;
+  text-align: center;
+  font-size: xx-large;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  letter-spacing: normal;
+}
 .nav-bg-color {
   background-color: rgb(1, 47, 73) !important;
   padding-left: 2%;
