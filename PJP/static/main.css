@@ -3,6 +3,25 @@
   padding-left: 2%;
   padding-right: 2%;
 }
+.nav-item a:hover {
+	-webkit-transition: .5s all;
+    -moz-transition: .5s all;
+    -o-transition: .5s all;
+    -ms-transition: .5s all;
+    transition: .5s all;
+	background-color: #0f4869;
+
+}
+.navbar-brand:hover{
+	
+	-webkit-transition: .5s all;
+    -moz-transition: .5s all;
+    -o-transition: .5s all;
+    -ms-transition: .5s all;
+    transition: .5s all;
+	background-color: #0f4869;
+
+}
 
 .img-adjust {
   height: 90vh;
