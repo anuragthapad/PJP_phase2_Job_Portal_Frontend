@@ -137,8 +137,8 @@ $(document).ready(function () {
         newSection.children(':first').children(':nth-child(4)').children(':nth-child(2)').attr('id', 'startedworkingyear' + newNum).attr('name', 'startedworkingyear' + newNum);
         newSection.children(':first').children(':nth-child(5)').children(':first').attr('for', 'endingworkingyear' + newNum);
         newSection.children(':first').children(':nth-child(5)').children(':nth-child(2)').attr('id', 'endingworkingyear' + newNum).attr('name', 'endingworkingyear' + newNum);
-        newSection.children(':first').children(':nth-child(6)').children(':first').attr('for', 'shortdescriptionofworkdone' + newNum);
-        newSection.children(':first').children(':nth-child(6)').children(':nth-child(2)').attr('id', 'shortdescriptionofworkdone' + newNum).attr('name', 'shortdescriptionofworkdone' + newNum);
+        newSection.children(':first').children(':nth-child(6)').children(':first').attr('id', 'shortdescriptionofworkdone' + newNum).attr('name', 'shortdescriptionofworkdone' + newNum);
+
 
 
         $('.clonedwork').last().append(newSection)
@@ -211,8 +211,8 @@ $(document).ready(function () {
         newSection.children(':first').children(':nth-child(2)').children(':nth-child(2)').attr('id', 'startedprojectyear' + newNum).attr('name', 'startedprojectyear' + newNum);
         newSection.children(':first').children(':nth-child(3)').children(':first').attr('for', 'endingprojectyear' + newNum);
         newSection.children(':first').children(':nth-child(3)').children(':nth-child(2)').attr('id', 'endingprojectyear' + newNum).attr('name', 'endingprojectyear' + newNum);
-        newSection.children(':first').children(':nth-child(4)').children(':first').attr('for', 'shortdescriptionofprojectdone' + newNum);
-        newSection.children(':first').children(':nth-child(4)').children(':nth-child(2)').attr('id', 'shortdescriptionofprojectdone' + newNum).attr('name', 'shortdescriptionofprojectdone' + newNum);
+        newSection.children(':first').children(':nth-child(4)').children(':first').attr('id', 'shortdescriptionofprojectdone' + newNum).attr('name', 'shortdescriptionofprojectdone' + newNum);
+
 
 
         $('.clonedproject').last().append(newSection)
@@ -371,9 +371,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 }, false);
-
-
-
 
 
 
