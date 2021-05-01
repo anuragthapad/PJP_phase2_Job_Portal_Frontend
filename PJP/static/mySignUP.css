@@ -87,7 +87,7 @@ video {
 }
 
 .nav-bg-color {
-    background-color: #0f4869;
+    background-color: #0f4869 !important;
     padding-left: 2%;
     padding-right: 2%;
     display: block;

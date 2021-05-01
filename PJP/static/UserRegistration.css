@@ -21,7 +21,7 @@
 }
 
 .nav-bg-color {
-    background-color: rgb(1, 47, 73) !important;
+    background-color: #0f4869 !important;
     padding-left: 2%;
     padding-right: 2%;
 }
@@ -31,7 +31,7 @@
       -o-transition: .5s all;
       -ms-transition: .5s all;
       transition: .5s all;
-      background-color: #0f4869;
+      background-color: #0f4869 !important;
   
 }
   .navbar-brand:hover{
@@ -41,12 +41,15 @@
       -o-transition: .5s all;
       -ms-transition: .5s all;
       transition: .5s all;
-      background-color: #0f4869;
+      background-color: #0f4869 !important;
   
 }
 
 body{
-    background-color: #0f4869;
+    background: linear-gradient(to top, #1a5f87, #bddff2);
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Roboto', sans-serif;
 }
 
 .container{
@@ -55,7 +58,7 @@ body{
 }
 
 .bg-info {
-    background-color: rgba(0, 0, 0, 0.1)!important;
+    background-color: #0f4869 !important;
 }
 
 .card-header{
@@ -84,6 +87,11 @@ body{
     color: aliceblue;
     font-weight: 700;
 }
+
+.addsection:hover {
+    color: #40916c;
+}
+
 .display-6{
     font-size: x-large;
 }
