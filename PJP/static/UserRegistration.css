@@ -1,19 +1,19 @@
 #phone + span {
-    padding-right: 30px;
+    padding-right: 30vh;
   }
   
 #phone:invalid+span:after {
     position: absolute; 
     content: '✖';
-    padding-left: 5px;
-    color: red;
+    padding-left: 1vh;
+    color: #ef476f;
 }
   
 #phone:valid+span:after {
     position: absolute;
     content: '✓';
-    padding-left: 5px;
-    color: #009000;
+    padding-left: 1vh;
+    color: #06d6a0;
 } 
 
 .display-5{
@@ -21,7 +21,7 @@
 }
 
 .nav-bg-color {
-    background-color: #0f4869 !important;
+    background-color: rgb(1, 47, 73) !important;
     padding-left: 2%;
     padding-right: 2%;
 }
@@ -31,7 +31,7 @@
       -o-transition: .5s all;
       -ms-transition: .5s all;
       transition: .5s all;
-      background-color: #0f4869 !important;
+      background-color: #0f4869;
   
 }
   .navbar-brand:hover{
@@ -41,7 +41,7 @@
       -o-transition: .5s all;
       -ms-transition: .5s all;
       transition: .5s all;
-      background-color: #0f4869 !important;
+      background-color: #0f4869;
   
 }
 
@@ -58,7 +58,7 @@ body{
 }
 
 .bg-info {
-    background-color: #0f4869 !important;
+    background-color: #1e6091!important;
 }
 
 .card-header{
@@ -66,14 +66,14 @@ body{
 }
 
 .btn-primary{
-    background-color:#2a9d8f;
-    border-color: #2a9d8f;
+    background-color:#06d6a0;
+    border-color: #06d6a0;
     
 }
 
 .btn-primary:hover{
-    background-color:#0096c7;
-    border-color: #0096c7;
+    background-color:#118ab2;
+    border-color: #118ab2;
 }
 
 .img-adjust {
@@ -89,9 +89,19 @@ body{
 }
 
 .addsection:hover {
-    color: #40916c;
+    color: #06d6a0;
 }
 
 .display-6{
     font-size: x-large;
+}
+
+.btn-success{
+    background-color: #06d6a0;
+    border-color: #06d6a0;
+}
+
+.btn-danger{
+    background-color: #ef476f;
+    border-color: #ef476f;
 }

@@ -328,52 +328,24 @@ $(document).ready(function () {
 });
 
 //Password Validation
-document.addEventListener("DOMContentLoaded", function () {
-    if (!RegExp.escape) {
-        RegExp.escape = function (s) {
-            return String(s).replace(/[\\^$*+?.()|[\]{}]/g, '\\$&');
-        };
+var check = function () {
+    var str = document.getElementById('password').value;
+    if (str.match(/[a-z]/g) && str.match(/[A-Z]/g) && str.match(/[0-9]/g) && str.match(/[^a-zA-Z\d]/g) && str.length >= 6) {
+        document.getElementById('pwdmsg1').style.color = '#06d6a0';
+        document.getElementById('pwdmsg1').innerHTML = 'Strong Password';
     }
-
-
-    var checkPassword = function (str) {
-        var re = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
-        return re.test(str);
-    };
-
-    var supports_input_validity = function () {
-        var i = document.createElement("input");
-        return "setCustomValidity" in i;
+    else {
+        document.getElementById('pwdmsg1').style.color = '#ef476f';
+        document.getElementById('pwdmsg1').innerHTML = 'Weak Password';
     }
-    if (supports_input_validity()) {
-
-
-        var pwd1Input = document.getElementById("myPwd1");
-        pwd1Input.setCustomValidity(pwd1Input.title);
-
-        var pwd2Input = document.getElementById("myPwd2");
-
-        pwd1Input.addEventListener("keyup", function (e) {
-            this.setCustomValidity(this.validity.patternMismatch ? pwd1Input.title : "");
-            if (this.checkValidity()) {
-                pwd2Input.pattern = RegExp.escape(this.value);
-                pwd2Input.setCustomValidity(pwd2Input.title);
-            } else {
-                pwd2Input.pattern = this.pattern;
-                pwd2Input.setCustomValidity("");
-            }
-        }, false);
-
-        pwd2Input.addEventListener("keyup", function (e) {
-            this.setCustomValidity(this.validity.patternMismatch ? pwd2Input.title : "");
-        }, false);
-
+    if (document.getElementById('password').value == document.getElementById('confirm_password').value) {
+        document.getElementById('pwdmsg2').style.color = '#06d6a0';
+        document.getElementById('pwdmsg2').innerHTML = 'Matching';
+    } else {
+        document.getElementById('pwdmsg2').style.color = '#ef476f';
+        document.getElementById('pwdmsg2').innerHTML = 'Not Matching';
     }
-
-}, false);
-
-
-
+}
 
 
 

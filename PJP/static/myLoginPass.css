@@ -99,7 +99,7 @@ video {
     -o-transition: .5s all;
     -ms-transition: .5s all;
     transition: .5s all;
-	background-color: #0f4869 !important;
+	background-color: #0f4869;
 
 }
 .navbar-brand:hover{
@@ -109,7 +109,7 @@ video {
     -o-transition: .5s all;
     -ms-transition: .5s all;
     transition: .5s all;
-	background-color: #0f4869 !important;
+	background-color: #0f4869;
 
 }
 

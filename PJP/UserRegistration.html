@@ -85,21 +85,21 @@
                             </div>
 
                             <div class="col-md-6">
-                                <label class="form-label" for="myPwd1">Enter Password</label>
-                                <input class="form-control" id="myPwd1" type="password"
+                                <label class="form-label" for="password">Enter Password</label>
+                                <input class="form-control" id="password" type="password"
                                     title="Password must contain at least 6 characters, including UPPER/lowercase and numbers."
-                                    required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" name="pwd1"
-                                    placeholder="Password">
-                                <p id="user_pwd1"></p>
+                                    required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" name="password"
+                                    onkeyup='check();' placeholder="Password">
+                                <span id='pwdmsg1'></span>
                             </div>
 
                             <div class="col-md-6">
-                                <label class="form-label" for="myPwd2">Re-Enter Password</label>
+                                <label class="form-label" for="confirm_password">Confirm Password</label>
                                 <input class="form-control" class="text" type="password"
-                                    title="Please enter the same Password as above." id="myPwd2" required
-                                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" name="pwd1"
-                                    placeholder="Confirm Password">
-                                <p id="user_pwd2"></p>
+                                    title="Please enter the same Password as above." id="confirm_password" required
+                                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" name="confirm_password"
+                                    onkeyup='check();' placeholder="Confirm Password">
+                                <span id='pwdmsg2'></span>
                             </div>
 
                             <div class="col-12">
@@ -178,9 +178,9 @@
 
                             <br>
                             <div>
-                                <input class="btn btn-outline-success btn-sm" type="button" id="btnAddqual"
+                                <input class="btn btn-success" type="button" id="btnAddqual"
                                     value="Add Another Qualification" />
-                                <input class="btn btn-outline-danger btn-sm" type="button" id="btnDelqual"
+                                <input class="btn btn-danger" type="button" id="btnDelqual"
                                     value="Remove Qualification" />
                             </div>
                         </div>
@@ -211,10 +211,9 @@
                             </div>
 
                             <div>
-                                <input class="btn btn-outline-success btn-sm" type="button" id="btnAddskill"
+                                <input class="btn btn-success" type="button" id="btnAddskill"
                                     value="Add Another Skill" />
-                                <input class="btn btn-outline-danger btn-sm" type="button" id="btnDelskill"
-                                    value="Remove Skill" />
+                                <input class="btn btn-danger" type="button" id="btnDelskill" value="Remove Skill" />
                             </div>
                         </div>
 
@@ -276,10 +275,9 @@
 
                             <br>
                             <div>
-                                <input class="btn btn-outline-success btn-sm" type="button" id="btnAddwork"
+                                <input class="btn btn-success" type="button" id="btnAddwork"
                                     value="Add Another Experience" />
-                                <input class="btn btn-outline-danger btn-sm" type="button" id="btnDelwork"
-                                    value="Remove Experience" />
+                                <input class="btn btn-danger" type="button" id="btnDelwork" value="Remove Experience" />
                             </div>
                         </div>
 
@@ -330,10 +328,9 @@
 
                             <br>
                             <div>
-                                <input class="btn btn-outline-success btn-sm" type="button" id="btnAddproject"
+                                <input class="btn btn-success" type="button" id="btnAddproject"
                                     value="Add Another Project" />
-                                <input class="btn btn-outline-danger btn-sm" type="button" id="btnDelproject"
-                                    value="Remove project" />
+                                <input class="btn btn-danger" type="button" id="btnDelproject" value="Remove project" />
                             </div>
 
                         </div>
@@ -379,9 +376,9 @@
 
                             <br>
                             <div>
-                                <input class="btn btn-outline-success btn-sm" type="button" id="btnAddcertificate"
+                                <input class="btn btn-success" type="button" id="btnAddcertificate"
                                     value="Add Another certificate" />
-                                <input class="btn btn-outline-danger btn-sm" type="button" id="btnDelcertificate"
+                                <input class="btn btn-danger" type="button" id="btnDelcertificate"
                                     value="Remove certificate" />
                             </div>
                         </div>
