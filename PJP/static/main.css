@@ -80,13 +80,14 @@ section {
   position: relative;
 }
 
-.tagline {
+.tagline h2 {
   text-align: center;
   color: white;
   position: absolute;
   z-index: 10;
   top: 30%;
   left: 35%;
+  letter-spacing: normal;
 }
 
 .btn-outline {
