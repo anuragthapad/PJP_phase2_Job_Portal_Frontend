@@ -1,7 +1,9 @@
 a {
   text-decoration: none;
 }
-
+.sidebar a {
+  text-decoration: none;
+}
 div#header {
   width: auto;
   height: 8%;
