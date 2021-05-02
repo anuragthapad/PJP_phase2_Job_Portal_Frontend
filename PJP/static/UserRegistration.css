@@ -22,8 +22,9 @@
     background-color: rgb(1, 47, 73) !important;
     padding-left: 2%;
     padding-right: 2%;
+	
 }
-  .nav-item a:hover {
+.nav-item a:hover {
       -webkit-transition: .5s all;
       -moz-transition: .5s all;
       -o-transition: .5s all;
@@ -72,14 +73,14 @@ body{
 }
 
 .btn-primary{
-    background-color:#06d6a0;
-    border-color: #06d6a0;
+    background-color:#118ab2;
+    border-color:#118ab2;
     
 }
 
 .btn-primary:hover{
-    background-color:#118ab2;
-    border-color: #118ab2;
+    background-color:#8dc26f;
+    border-color: #8dc26f;
 }
 
 .img-adjust {
@@ -98,7 +99,7 @@ body{
 }
 
 .addsection:hover {
-    color: #06d6a0;
+    color: #8dc26f;
 }
 
 

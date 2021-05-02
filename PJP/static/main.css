@@ -2,7 +2,7 @@
   color: white;
   text-align: center;
   font-size: xx-large;
-  font-family: 'Roboto', sans-serif;
+  font-family: var(--bs-font-sans-serif);
   font-weight: 500;
   letter-spacing: normal;
 }
@@ -10,6 +10,7 @@
   background-color: rgb(1, 47, 73) !important;
   padding-left: 2%;
   padding-right: 2%;
+  font-family: var(--bs-font-sans-serif);
 }
 .nav-item a:hover {
   -webkit-transition: 0.5s all;
@@ -50,6 +51,7 @@
   z-index: 10;
   top: 40%;
   left: 40%;
+  font-family:var(--bs-font-sans-serif);
 }
 
 .view-as-admin {
