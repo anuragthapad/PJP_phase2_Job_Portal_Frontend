@@ -1,9 +1,11 @@
 a {
   text-decoration: none;
 }
+
 .sidebar a {
   text-decoration: none;
 }
+
 div#header {
   width: auto;
   height: 8%;
@@ -34,15 +36,18 @@ ul#nav li {
   height: 10px;
   /*background-image: url("../images/success.png");*/
 }
+
 ul#nav li span {
   position: relative;
 }
+
 ul#nav li span img {
   float: left;
   display: block;
   margin-left: 1px;
   margin-top: 2px;
 }
+
 ul#nav li a {
   color: #ccc;
   display: block;
@@ -113,17 +118,14 @@ div#box .box-panel {
     padding: 7px;
     cursor: pointer;
   }
-
   a.mobile:active {
     background: #474747;
   }
-
   .sidebar {
     width: 100%;
     display: none;
     height: auto;
   }
-
   .content {
     margin-left: 0;
   }
@@ -166,10 +168,12 @@ div#box .box-panel {
     display: none;
   }
 }
+
 .txt {
   width: 100%;
   padding: 10px;
 }
+
 .txt2 {
   margin-left: 250px;
   font-size: 40px;
@@ -177,12 +181,10 @@ div#box .box-panel {
 
 label {
   width: 180px;
-
   padding-right: 70px;
 }
 
-input,
-label {
+input, label {
   float: left;
 }
 
@@ -194,8 +196,7 @@ label {
   overflow: hidden;
 }
 
-.control,
-fieldset {
+.control, fieldset {
   margin: 6px 0;
 }
 
@@ -219,6 +220,7 @@ label {
 }
 
 /* On mouse-over */
+
 .btn:hover {
   background: #eee;
 }
@@ -238,18 +240,29 @@ p {
   font-size: xx-large;
 }
 
-table,
-th,
-td {
+table, th, td {
   text-align: center;
   border-bottom-style: groove;
 }
+
 th {
   text-align: center;
   color: gray;
 }
-th,
-td {
+
+th, td {
   text-align: center;
   padding: 18px;
+}
+
+.table-sortable .th-sort-asc::after {
+  content: "\25b4";
+}
+
+.table-sortable .th-sort-desc::after {
+  content: "\25be";
+}
+
+.table-sortable .th-sort-asc::after, .table-sortable .th-sort-desc::after {
+  margin-left: 5px;
 }
