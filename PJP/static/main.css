@@ -252,6 +252,10 @@ input[type="password"] {
   text-align: left;
   color: red;
 }
+
+#login_val {
+  color: red;
+}
 input.email,
 input.text.logINlpass {
   margin: 2em 0;

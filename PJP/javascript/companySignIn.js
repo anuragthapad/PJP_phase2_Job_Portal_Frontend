@@ -1,32 +1,19 @@
-function startWithU(targ) {
-    if ((targ.startsWith("u", 0) || targ.startsWith("U", 0)) == true) {
-        return true;
-    } else return false;
-
-};
-
-function startWithC(targ) {
-    if ((targ.startsWith("c", 0) || targ.startsWith("C", 0)) == true) {
-        return true;
-    } else return false;
-
-};
+var eid = "pjp_company@ps.com"
+var psw = "@Abcd123";
 
 function validateform(form) {
-    var temp = document.getElementById("company_id").value;
-    if (temp.length < 8) {
-        document.getElementById("company_val").innerHTML = "Error : Enter 8 character User ID.";
-        // document.getElementById("SignUP_form").reset();
-        return false;
+	var pass_form = document.getElementById("cPwd1").value;
+	var email_form = document.getElementById("email_id").value;
 
-    }
-    var sU = startWithU(temp);
-    var sC = startWithC(temp);
-    if ((sU || sC) == false) {
-        document.getElementById("company_val").innerHTML = "Error : User ID must start with U or C.";
-        // document.getElementById("SignUP_form").reset();
-        return false;
-    }
+
+	if (pass_form == psw && email_form == eid ) {
+		setTimeout(function () { window.location = "./admin.html" });
+	}
+	else {
+		document.getElementById("login_val").innerHTML = "Error : Enter correct Credentials";
+		document.getElementById("SignUP_form").reset();
+		return false;
+	}
 
 };
 
