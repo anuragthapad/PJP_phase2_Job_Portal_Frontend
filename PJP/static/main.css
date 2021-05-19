@@ -199,6 +199,19 @@ h2 {
   padding: 0;
 }
 
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 70%;
+}
+
+td,
+th {
+  /* border: 1px solid #dddddd; */
+  text-align: left;
+  padding: 10px;
+}
+
 /*-- main --*/
 .main-logINlayouts {
   padding: 3em 0 1em;
