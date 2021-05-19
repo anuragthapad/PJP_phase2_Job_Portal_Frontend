@@ -347,6 +347,30 @@ var check = function () {
     }
 }
 
+function storeData()
+{
+    return true;
+}
+
+function genUserId()
+{
+    return true;
+}
+
+function successPage()
+{
+    if(storeData()&&genUserId())
+    {
+    document.getElementById("user_msg").innerHTML="User Registration is Successful !";
+    document.getElementById("user_msg_id").innerHTML="Your User ID is : ";
+    }
+
+    else 
+    {
+        document.getElementById("user_msg").innerHTML="User Registration is NOT Successful !";
+    }
+}
+
 //Slide Collapse/Expand
 
 // $(".header").click(function () {
