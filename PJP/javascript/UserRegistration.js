@@ -347,29 +347,26 @@ var check = function () {
     }
 }
 
-function storeData()
-{
+function storeData() {
     return true;
 }
 
-function genUserId()
-{
+function genUserId() {
     return true;
 }
 
-function successPage()
-{
-    if(storeData()&&genUserId())
-    {
-    document.getElementById("user_msg").innerHTML="User Registration is Successful !";
-    document.getElementById("user_msg_id").innerHTML="Your User ID is : ";
+function successPage() {
+    if (storeData() && genUserId()) {
+        document.getElementById("user_msg").innerHTML = "User Registration is Successful !";
+        document.getElementById("user_msg_id").innerHTML = "Your User ID is : ";
     }
 
-    else 
-    {
-        document.getElementById("user_msg").innerHTML="User Registration is NOT Successful !";
+    else {
+        document.getElementById("user_msg").innerHTML = "User Registration is NOT Successful !";
     }
 }
+
+
 
 //Slide Collapse/Expand
 
