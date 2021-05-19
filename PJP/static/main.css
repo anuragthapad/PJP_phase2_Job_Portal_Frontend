@@ -41,10 +41,21 @@
   height: 90vh;
 }
 
+body{
+  height: 100vh;
+}
+
+.page-wrap-signin{
+  min-height: 90%; 
+}
+
+.page-wrap-signup{
+  min-height: 90%; 
+}
+
 .footer-css {
-  background-color: rgb(1, 47, 73) !important;
   height: 10vh;
-  width: 100%;
+  background-color: rgb(1, 47, 73) !important;
 }
 .options {
   position: absolute;
@@ -340,6 +351,13 @@ input[type="submit"]:hover {
 
 .agileits-top p a:hover {
   color: #76b852;
+}
+
+.main-agileinfo{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1%;
+  margin-bottom: 1%;
 }
 
 /*-- //main --*/
