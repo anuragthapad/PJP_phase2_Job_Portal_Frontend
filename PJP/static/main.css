@@ -45,12 +45,24 @@ body{
   height: 100vh;
 }
 
+.page-wrap-index{
+  min-height: 90%; 
+}
+
 .page-wrap-signin{
   min-height: 90%; 
 }
 
 .page-wrap-signup{
   min-height: 90%; 
+}
+
+.page-wrap-comapanysignin{
+  min-height: 90%; 
+}
+
+.page-wrap-userdetails-view-admin{
+  min-height: 90%;
 }
 
 .footer-css {
