@@ -237,10 +237,10 @@ h2 {
   font-size: 3em;
   text-align: center;
   color: rgb(1, 47, 73);
-  font-weight: 100;
+  font-weight: 400;
   text-transform: capitalize;
   letter-spacing: 2px;
-  padding: 0;
+  padding: 7px;
 }
 
 table {
@@ -274,6 +274,7 @@ th {
   border-radius: 10px;
   box-shadow: 0px 10px 20px #838383;
   width: 90%;
+  font-family:  var(--bs-font-sans-serif);
 }
 
 input[type="text"],
@@ -306,7 +307,6 @@ input[type="password"] {
   color: #838383;
 }
 #user_val {
-  text-align: left;
   color: red;
 }
 
@@ -518,6 +518,7 @@ input[type="submit"]:hover {
 
   .agileits-top {
     padding: 1.8em;
+    
   }
 
   input[type="text"],
@@ -527,6 +528,7 @@ input[type="submit"]:hover {
 
   .agileits-top p {
     font-size: 0.9em;
+   
   }
 }
 

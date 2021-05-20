@@ -351,12 +351,9 @@ function storeData() {
     return true;
 }
 
-function genUserId() {
-    return true;
-}
 
 function successPage() {
-    if (storeData() && genUserId()) {
+    if (storeData()) {
         document.getElementById("user_msg").innerHTML = "User Registration is Successful !";
         document.getElementById("user_msg_id").innerHTML = "Your User ID is : ";
     }
