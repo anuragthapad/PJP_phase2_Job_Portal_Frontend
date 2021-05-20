@@ -12,6 +12,12 @@
 .navbar-brand{
   color: #fff !important;
 }
+.navbar-nav{
+  width: 100% !important;
+  display: flex !important;
+  justify-content:flex-end !important;
+  align-items: center !important;
+}
 /* .navbar-toggler-icon{
   color: #fff !important;
 } */
