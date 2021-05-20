@@ -1,11 +1,4 @@
-#indexh2{
-  color: white;
-  text-align: center;
-  font-size: xx-large;
-  font-family: var(--bs-font-sans-serif);
-  font-weight: 500;
-  letter-spacing: normal;
-}
+
 
 .bg-light {
   background-color: rgb(1, 47, 73) !important;
@@ -51,7 +44,7 @@
 }
 
 .img-adjust {
-  height: 90vh;
+  height: 90vh !important;
   width: 100%;
   position: absolute;
 }
@@ -237,10 +230,10 @@ h2 {
   font-size: 3em;
   text-align: center;
   color: rgb(1, 47, 73);
-  font-weight: 100;
+  font-weight: 400;
   text-transform: capitalize;
   letter-spacing: 2px;
-  padding: 0;
+  padding: 7px;
 }
 
 table {
@@ -274,6 +267,7 @@ th {
   border-radius: 10px;
   box-shadow: 0px 10px 20px #838383;
   width: 90%;
+  font-family:  var(--bs-font-sans-serif);
 }
 
 input[type="text"],
@@ -306,7 +300,6 @@ input[type="password"] {
   color: #838383;
 }
 #user_val {
-  text-align: left;
   color: red;
 }
 
@@ -393,9 +386,16 @@ input[type="submit"]:hover {
   margin-bottom: 1%;
 }
 
+#indexh2{
+  color: white;
+  text-align: left;
+  font-size: xx-large;
+  font-family: var(--bs-font-sans-serif);
+  font-weight: 500;
+  letter-spacing: normal;
+}
 /*-- //main --*/
 /*-- checkbox --*/
-
 /*-- responsive-design --*/
 @media (max-width: 1440px) {
   input[type="text"],
@@ -441,6 +441,16 @@ input[type="submit"]:hover {
 }
 
 @media (max-width: 991px) {
+  #indexh2{
+    font-size: 2em;
+  }
+  .tagline{
+    text-align: center;
+    left: 20%;
+  }
+  .options {
+    left: 25%;
+  }
   h2 {
     font-size: 2.4em;
   }
@@ -451,6 +461,19 @@ input[type="submit"]:hover {
 }
 
 @media (max-width: 900px) {
+  #indexh2{
+    font-size: 1.8em;
+  }
+  .tagline{
+    text-align: center;
+    left: 20%;
+  }
+  .options {
+    left: 25%;
+  }
+  .view-as-admin, .view-as-user{
+    font-size: medium;
+  }
   .main-agileinfo {
     width: 58%;
   }
@@ -463,24 +486,76 @@ input[type="submit"]:hover {
 }
 
 @media (max-width: 800px) {
+  #indexh2{
+    font-size: 1.6em;
+  }
+  .tagline{
+    text-align: center;
+    left: 20%;
+  }
+  .options {
+    left: 25%;
+  }
+  .view-as-admin, .view-as-user{
+    font-size: medium;
+  }
   h2 {
     font-size: 2.2em;
   }
 }
 
 @media (max-width: 736px) {
+  #indexh2{
+    font-size: 1.5em;
+  }
+  .tagline{
+    text-align: center;
+    left: 20%;
+  }
+  .options {
+    left: 25%;
+  }
+  .view-as-admin, .view-as-user{
+    font-size: medium;
+  }
   .main-agileinfo {
     width: 62%;
   }
 }
 
 @media (max-width: 667px) {
+  #indexh2{
+    font-size: 1.4em;
+  }
+  .tagline{
+    text-align: center;
+    left: 20%;
+  }
+  .options {
+    left: 25%;
+  }
+  .view-as-admin, .view-as-user{
+    font-size: medium;
+  }
   .main-agileinfo {
     width: 67%;
   }
 }
 
 @media (max-width: 600px) {
+  #indexh2{
+    font-size: 1.3em;
+  }
+  .tagline{
+    text-align: center;
+    left: 20%;
+  }
+  .options {
+    left: 25%;
+  }
+  .view-as-admin, .view-as-user{
+    font-size: small;
+  }
   .agileits-top {
     padding: 2.2em;
   }
@@ -501,6 +576,19 @@ input[type="submit"]:hover {
 }
 
 @media (max-width: 568px) {
+  #indexh2{
+    font-size: 1.2em;
+  }
+  .tagline{
+    text-align: center;
+    left: 20%;
+  }
+  .options {
+    left: 25%;
+  }
+  .view-as-admin, .view-as-user{
+    font-size: small;
+  }
   .main-agileinfo {
     width: 75%;
   }
@@ -511,6 +599,20 @@ input[type="submit"]:hover {
 }
 
 @media (max-width: 480px) {
+  #indexh2{
+    font-size: 1.1em;
+    text-align: center;
+  }
+  .tagline{
+    text-align: center;
+    left: 20%;
+  }
+  .options {
+    left: 25%;
+  }
+  .view-as-admin, .view-as-user{
+    font-size: small;
+  }
   h2 {
     font-size: 1.8em;
     letter-spacing: 3px;
@@ -518,6 +620,7 @@ input[type="submit"]:hover {
 
   .agileits-top {
     padding: 1.8em;
+    
   }
 
   input[type="text"],
@@ -527,10 +630,25 @@ input[type="submit"]:hover {
 
   .agileits-top p {
     font-size: 0.9em;
+   
   }
 }
 
 @media (max-width: 414px) {
+  #indexh2{
+    font-size: 1.1em;
+    text-align: center;
+  }
+  .tagline{
+    text-align: center;
+    left: 20%;
+  }
+  .options {
+    left: 20%;
+  }
+  .view-as-admin, .view-as-user{
+    font-size: small;
+  }
   h2 {
     font-size: 1.8em;
     letter-spacing: 2px;
@@ -571,6 +689,20 @@ input[type="submit"]:hover {
 }
 
 @media (max-width: 384px) {
+  #indexh2{
+    font-size: 1.1em;
+    text-align: center;
+  }
+  .tagline{
+    text-align: center;
+    left: 20%;
+  }
+  .options {
+    left: 20%;
+  }
+  .view-as-admin, .view-as-user{
+    font-size: small;
+  }
   .main-agileinfo {
     width: 88%;
   }
@@ -581,12 +713,40 @@ input[type="submit"]:hover {
 }
 
 @media (max-width: 375px) {
+  #indexh2{
+    font-size: 1em;
+    text-align: center;
+  }
+  .tagline{
+    text-align: center;
+    left: 20%;
+  }
+  .options {
+    left: 20%;
+  }
+  .view-as-admin, .view-as-user{
+    font-size: small;
+  }
   .agileits-top p {
     letter-spacing: 0px;
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 325px) {
+  #indexh2{
+    font-size: 0.95em;
+    text-align: center;
+  }
+  .tagline{
+    text-align: center;
+    left: 10%;
+  }
+  .options {
+    left: 10%;
+  }
+  .view-as-admin, .view-as-user{
+    font-size: small;
+  }
   .main-logINlayouts {
     padding: 1.5em 0 0;
   }

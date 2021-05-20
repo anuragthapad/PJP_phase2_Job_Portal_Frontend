@@ -154,6 +154,13 @@ body{
     background-color: rgb(1, 47, 73) !important;
 }
 
+@media (max-width: 1440px){
+
+  #user_msg {
+      font-size: 1.8em;
+  }
+  
+}
 
 
 @media (max-width: 1257px){
@@ -169,9 +176,10 @@ body{
     box-shadow: 0px 10px 20px #838383 !important;
     width: 100%;
   }
- 
-  .card-header {
-      font-size: 2em;
+  
+
+  #user_msg {
+      font-size: 1.7em;
   }
   
 }
@@ -191,7 +199,7 @@ body{
     
   }
   
-  .card-header {
+  #user_msg {
       font-size: 1.5em;
   }
 
@@ -207,7 +215,7 @@ body{
  }
 }
 
-@media (max-width: 370px){
+@media (max-width: 406px){
   .container{
     width: 100%;
     margin-top: 40%;
@@ -220,10 +228,39 @@ body{
     box-shadow: 0px 10px 20px #838383 !important;
     width: 100%;
   }
-  .card-header {
-      font-size: 1.3em;
+  #user_msg {
+      font-size: 1.1em;
   }
 
+  .display-6{
+    font-size: large;
+	  font-weight: 470;
+  }
+
+}
+
+@media (max-width: 310px){
+  .container{
+    width: 100%;
+    margin-top: 40%;
+  }
+  .bg-info {
+    padding: 0;
+    border: solid rgb(1, 47, 73);
+    background-color: #fff !important;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px #838383 !important;
+    width: 100%;
+  }
+  
+
+  .card-header{
+    font-size: 1.5em;
+  }
+
+  #user_msg {
+    font-size: 0.8em;
+  }
   .display-6{
     font-size: large;
 	  font-weight: 470;

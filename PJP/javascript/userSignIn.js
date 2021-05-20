@@ -1,34 +1,34 @@
-function startWithU(targ) {
-	if ((targ.startsWith("u", 0) || targ.startsWith("U", 0)) == true) {
-		return true;
-	}
-	else return false;
+// function startWithU(targ) {
+// 	if ((targ.startsWith("u", 0) || targ.startsWith("U", 0)) == true) {
+// 		return true;
+// 	}
+// 	else return false;
 
-};
+// };
 var psw = "@Abcd123";
 var eid = "pjp_user@ps.com";
-var uid = "U1234567";
+//var uid = "U1234567";
 
 function validateform(form) {
-	var temp = document.getElementById("user_id").value;
-	if (temp.length < 8 || temp.length > 8) {
-		document.getElementById("user_val").innerHTML = "Error : Enter 8 character User ID.";
-		document.getElementById("SignUP_form").reset();
-		return false;
+	// var temp = document.getElementById("user_id").value;
+	// if (temp.length < 8 || temp.length > 8) {
+	// 	document.getElementById("user_val").innerHTML = "Error : Enter 8 character User ID.";
+	// 	document.getElementById("SignUP_form").reset();
+	// 	return false;
 
-	}
-	var sU = startWithU(temp);
-	if (sU == false) {
-		document.getElementById("user_val").innerHTML = "Error : User ID must start with U.";
-		document.getElementById("SignUP_form").reset();
-		return false;
-	}
+	// }
+	// var sU = startWithU(temp);
+	// if (sU == false) {
+	// 	document.getElementById("user_val").innerHTML = "Error : User ID must start with U.";
+	// 	document.getElementById("SignUP_form").reset();
+	// 	return false;
+	// }
 
 	var pass_form = document.getElementById("myPwd1").value;
 	var email_form = document.getElementById("email_id").value;
-	var user_form = document.getElementById("user_id").value;
+	//var user_form = document.getElementById("user_id").value;
 
-	if (pass_form == psw && email_form == eid && user_form == uid) {
+	if (pass_form == psw && email_form == eid ) {
 		setTimeout(function () { window.location = "./UserDetailsViewAdmin.html" });
 	}
 	else {
