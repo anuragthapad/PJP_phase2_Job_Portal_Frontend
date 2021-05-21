@@ -3,8 +3,8 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="./static//bootstrap.css">
-    <link rel="stylesheet" href="./static//main.css">
+    <link rel="stylesheet" href="./static/bootstrap.css">
+    <link rel="stylesheet" href="./static/main.css">
     <title>User Sign IN</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -17,8 +17,8 @@
                 <div class="container-fluid">
                     <a class="navbar-brand" href="index.html">Job Portal</a>
                     <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav">
                             <li class="nav-item">
@@ -41,7 +41,10 @@
                 <div class="main-agileinfo">
                     <div class="agileits-top">
                         <h2>User SignIn</h2>
+
                         <form id="SignUP_form" onsubmit="return (validateform())" method="POST" action="/auth/login">
+                            <!-- <input class="text" id="user_id" type="text" name="UserID" placeholder="User ID" required="">
+              <p id="user_val"></p> -->
 
                             <input class="text email" id="email_id" type="email" name="email" placeholder="Email ID" required="">
                             <p id="user_email"></p>
@@ -52,7 +55,6 @@
                             <p id="login_val"></p>
                             </p>
                             <input type="submit" value="SIGN IN">
-
                         </form>
                         <p>Don't have an Account? <a href="UserRegistration.html"> Create One!</a></p>
                     </div>
@@ -64,7 +66,8 @@
     <footer class="footer-css"></footer>
     <!-- //main -->
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
+    </script>
     <script src="./javascript//userSignIn.js">
     </script>
 </body>
