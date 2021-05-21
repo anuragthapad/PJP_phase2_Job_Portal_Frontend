@@ -87,8 +87,8 @@
 
               <h3>Qualification Details ____________________</h3>
               <br />
-              <% if(user.qualificationDetails.length > 0) { %> <%
-              user.qualificationDetails.forEach(qualification => { %>
+              <% if(user.qualificationDetails.length > 0) { %> 
+              <% user.qualificationDetails.forEach(qualification => { %>
               <table>
                 <tr>
                   <td>Institute Name:</td>
@@ -97,8 +97,7 @@
                 <tr>
                   <td>Duration:</td>
                   <td>
-                    <%= qualification.startDate %> - <%= qualification.endDate
-                    %>
+                    <%= qualification.startDate %> - <%= qualification.endDate %>
                   </td>
                 </tr>
                 <tr>
@@ -115,7 +114,8 @@
                 </tr>
               </table>
               <br />
-              <% }) %> <% } else { %>
+              <% }) %> 
+              <% } else { %>
               <h3>No data Available</h3>
               <% } %>
 
@@ -133,8 +133,8 @@
 
               <h3>Work Experience ____________________</h3>
               <br />
-              <% if(user.workExperience.length > 0) { %> <%
-              user.workExperience.forEach(exp => { %>
+              <% if(user.workExperience.length > 0) { %> 
+              <% user.workExperience.forEach(exp => { %>
               <table>
                 <tr>
                   <td>Role:</td>
@@ -164,8 +164,8 @@
 
               <h3>Project Details ____________________</h3>
               <br />
-              <% if(user.projectDetails.length > 0) { %> <%
-              user.projectDetails.forEach(project => { %>
+              <% if(user.projectDetails.length > 0) { %>
+              <% user.projectDetails.forEach(project => { %>
               <table>
                 <tr>
                   <td>Project Title:</td>
