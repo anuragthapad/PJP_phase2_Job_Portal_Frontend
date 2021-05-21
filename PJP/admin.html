@@ -2,172 +2,197 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./static/bootstrap.css">
-  <link rel="stylesheet" href="./static/Admin_Pannel.css">
-  <title>Filter Page</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="static/Admin_Pannel.css">
+
+    <title>Filter Page</title>
 </head>
 
 <body>
-
-  <div>
-    <div id="header">
-      <div class="logo">
-        Admin Page
-        <div class="topnav-right">
-          <div class="topnav">
-            <img src="https://cdn2.iconfinder.com/data/icons/users-6/100/USER2-512.png" width="40" height="40"
-              style="vertical-align:middle">
-            <a href="adminProfile.html">My Profile</a>
-          </div>
-
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container-fluid">
+            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                <span class="navbar-toggler-icon" data-bs-target="#offcanvasExample"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">Job Portal</a>
+            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </div>
-    </div>
-    <a class="mobile">MENU</a>
-    <div id="container">
-      <div class="sidebar">
-        <ul id="nav">
-          <li>
-            <a href="userDetails.html">User Details</a>
-          </li>
-          <li>
-            <a href="admin.html">Filter</a>
-          </li>
+    </nav>
 
-          <li>
-            <a href="index.html">Job Portal </a>
-          </li>
+    <!-- SideBar -->
 
-        </ul>
-
-      </div>
-      <div class="content">
-
-
-        <h3>Job Profile</h3>
-        <select name="Job" id="select2" style="height:50px; width:500px; font-size: large">
-          <option value="Web Developer">Web Developer</option>
-          <option value="Senior Software Engineer">Senior Software Engineer</option>
-          <option value="Java Developer">Java Developer</option>
-          <option value="C/C++ Developer">C/C++ Developer</option>
-          <option value="PHP Developer">PHP Developer</option>
-          <option value="Android Developer">Android Developer</option>
-        </select>
-        <button id="btn2" class="btn"><img
-            src="https://th.bing.com/th/id/Rd41427e11f0b5069fda610bf8b49b930?rik=J%2fMubujtBPOhXg&riu=http%3a%2f%2ficons.iconarchive.com%2ficons%2fcustom-icon-design%2fmono-general-2%2f512%2fsearch-icon.png&ehk=5AO8%2fHeS7wi4cF9kkpMRuaQOU2o3H6iNQ%2fONeuKqc4I%3d&risl=&pid=ImgRaw"
-            style="height: 40px; width: 40px; vertical-align:middle;">
-        </button>
+    <div class="offcanvas offcanvas-start  sidebar-nav" data-bs-backdrop="false" tabindex="-1" id="offcanvasExample"
+        aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Admin</h5>
+            <button type="button" class="btn-close btn-close-white text-reset" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+        </div>
         <div>
-          <div id="output1"></div>
+            <a class="nav-link" aria-current="page" href="adminProfile.html">Admin Profile</a>
+            <a class="nav-link" href="userDetails.html">User Details</a>
+            <a class="nav-link" href="admin.html">Filter</a>
         </div>
-
-        <br><br><br>
-
-
-
-        <h3>Work Experience (In Years)</h3>
-        <input type="number" id="myInput" placeholder="Search by Work Experience" name="years" id="years" value="0"
-          style="height:50px; width:500px; font-size: large">
-        <button id="btn3" class="btn"><img
-            src="https://th.bing.com/th/id/Rd41427e11f0b5069fda610bf8b49b930?rik=J%2fMubujtBPOhXg&riu=http%3a%2f%2ficons.iconarchive.com%2ficons%2fcustom-icon-design%2fmono-general-2%2f512%2fsearch-icon.png&ehk=5AO8%2fHeS7wi4cF9kkpMRuaQOU2o3H6iNQ%2fONeuKqc4I%3d&risl=&pid=ImgRaw"
-            style="height: 40px; width: 40px; vertical-align:middle;">
-        </button>
-        <div>
-          <div id="output2"></div>
-
-        </div>
-
-        <br><br><br>
-
-        <div class="table-responsive">
-          <table id="myTable">
-            <tr>
-              <th>First Name <br></th>
-              <th>Last Name<br></th>
-              <th>Gender<br></th>
-              <th>Date of Birth<br></th>
-              <th>Email<br></th>
-              <th>Phone<br></th>
-              <th>Work Experience<br></th>
-              <th>Job Profile<br></th>
-              <th>Location<br></th>
-            </tr>
-            <tr>
-              <td>Peter</td>
-              <td>Parker</td>
-              <td>Male</td>
-              <td>02-12-1998</td>
-              <td>peter@gmail.com</td>
-              <td>9875678765</td>
-              <td>2</td>
-              <td>Java Developer</td>
-              <td>Banglore</td>
-            </tr>
-            <tr>
-              <td>Clark</td>
-              <td>Clent</td>
-              <td>Male</td>
-              <td>13-09-1995</td>
-              <td>cclent13@gmail.com</td>
-              <td>7896543456</td>
-              <td>4</td>
-              <td>Web Developer</td>
-              <td>Noida</td>
-            </tr>
-            <tr>
-              <td>Adele</td>
-              <td>Flores</td>
-              <td>Female</td>
-              <td>16-05-1987</td>
-              <td>adeleflores@gmail.com</td>
-              <td>8987789541</td>
-              <td>6</td>
-              <td>Senior Software Engineer</td>
-              <td>Gurgaon</td>
-            </tr>
-            <tr>
-              <td>Marlin</td>
-              <td>Bryant</td>
-              <td>Male</td>
-              <td>26-03-1993</td>
-              <td>mbryant@gmail.com</td>
-              <td>8976510098</td>
-              <td>5</td>
-              <td>C/C++ Developer</td>
-              <td>Chennai</td>
-            </tr>
-            <tr>
-              <td>Juliana</td>
-              <td>Bennett</td>
-              <td>Female</td>
-              <td>09-01-1991</td>
-              <td>julianabennett@gmail.com</td>
-              <td>7800126578</td>
-              <td>7</td>
-              <td>PHP Developer</td>
-              <td>Delhi</td>
-            </tr>
-            <tr>
-              <td>Olive</td>
-              <td>Patterson</td>
-              <td>Female</td>
-              <td>02-12-1988</td>
-              <td>olive@gmail.com</td>
-              <td>7098744567</td>
-              <td>6</td>
-              <td>Java Developer</td>
-              <td>Delhi</td>
-            </tr>
-          </table>
-        </div>
-      </div>
     </div>
-  </div>
 
-  <script src="./javascript/Filter_Page.js"></script>
+    <main class="mt-5 pt-3">
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="display-6">Job Profile</h3>
+                        <div class="input-group mb-3">
+                            <select class="form-select" name="Job" id="select2">
+                                <option value="Web Developer">Web Developer</option>
+                                <option value="Senior Software Engineer">Senior Software Engineer</option>
+                                <option value="Java Developer">Java Developer</option>
+                                <option value="C/C++ Developer">C/C++ Developer</option>
+                                <option value="PHP Developer">PHP Developer</option>
+                                <option value="Android Developer">Android Developer</option>
+                            </select>
+                            <button class="btn btn-outline-secondary" type="button" id="btn2"><i
+                                    class="bi bi-search"></i></button>
+                        </div>
+                        <div>
+                            <div id="output1"></div>
+                        </div>
+
+                        <h3 class="display-6">Work Experience (In Years)</h3>
+                        <div class="input-group mb-3">
+                            <input class="form-control" type="number" id="myInput"
+                                placeholder="Search by Work Experience" name="years" value="0">
+                            <button class="btn btn-outline-secondary" type="button" id="btn3"><i
+                                    class="bi bi-search"></i></button>
+                        </div>
+                        <div>
+                            <div id="output2"></div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-striped table-hover" id="myTable">
+                                <tr>
+                                    <th>First Name <br></th>
+                                    <th>Last Name<br></th>
+                                    <th>Gender<br></th>
+                                    <th>Date of Birth<br></th>
+                                    <th>Email<br></th>
+                                    <th>Phone<br></th>
+                                    <th>Work Experience<br></th>
+                                    <th>Job Profile<br></th>
+                                    <th>Location<br></th>
+                                </tr>
+                                <tr>
+                                    <td>Peter</td>
+                                    <td>Parker</td>
+                                    <td>Male</td>
+                                    <td>02-12-1998</td>
+                                    <td>peter@gmail.com</td>
+                                    <td>9875678765</td>
+                                    <td>2</td>
+                                    <td>Java Developer</td>
+                                    <td>Banglore</td>
+                                </tr>
+                                <tr>
+                                    <td>Clark</td>
+                                    <td>Clent</td>
+                                    <td>Male</td>
+                                    <td>13-09-1995</td>
+                                    <td>cclent13@gmail.com</td>
+                                    <td>7896543456</td>
+                                    <td>4</td>
+                                    <td>Web Developer</td>
+                                    <td>Noida</td>
+                                </tr>
+                                <tr>
+                                    <td>Adele</td>
+                                    <td>Flores</td>
+                                    <td>Female</td>
+                                    <td>16-05-1987</td>
+                                    <td>adeleflores@gmail.com</td>
+                                    <td>8987789541</td>
+                                    <td>6</td>
+                                    <td>Senior Software Engineer</td>
+                                    <td>Gurgaon</td>
+                                </tr>
+                                <tr>
+                                    <td>Marlin</td>
+                                    <td>Bryant</td>
+                                    <td>Male</td>
+                                    <td>26-03-1993</td>
+                                    <td>mbryant@gmail.com</td>
+                                    <td>8976510098</td>
+                                    <td>5</td>
+                                    <td>C/C++ Developer</td>
+                                    <td>Chennai</td>
+                                </tr>
+                                <tr>
+                                    <td>Juliana</td>
+                                    <td>Bennett</td>
+                                    <td>Female</td>
+                                    <td>09-01-1991</td>
+                                    <td>julianabennett@gmail.com</td>
+                                    <td>7800126578</td>
+                                    <td>7</td>
+                                    <td>PHP Developer</td>
+                                    <td>Delhi</td>
+                                </tr>
+                                <tr>
+                                    <td>Olive</td>
+                                    <td>Patterson</td>
+                                    <td>Female</td>
+                                    <td>02-12-1988</td>
+                                    <td>olive@gmail.com</td>
+                                    <td>7098744567</td>
+                                    <td>6</td>
+                                    <td>Java Developer</td>
+                                    <td>Delhi</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+    <script src="./javascript/Filter_Page.js"></script>
 </body>
 
 </html>

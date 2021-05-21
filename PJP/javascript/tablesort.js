@@ -42,7 +42,7 @@ function sortTableByColumn(table, column, asc = true) {
     }
 }
 
-document.querySelectorAll(".table-sortable th").forEach(headerCell => {
+document.querySelectorAll("#table-sortable th").forEach(headerCell => {
     headerCell.addEventListener("click", () => {
         const tableElement = headerCell.parentElement.parentElement.parentElement;
         const heraderIndex = Array.prototype.indexOf.call(headerCell.parentElement.children, headerCell);
