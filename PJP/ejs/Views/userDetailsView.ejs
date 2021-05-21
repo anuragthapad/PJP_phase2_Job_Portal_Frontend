@@ -223,7 +223,8 @@
               <table>
                 <tr>
                   <td>Awards:</td>
-                  <td><%= user.awards %></td>
+                  <% user.awardsAndAchievement.foreach(awards => { %>
+                  <td><%= awards %></td>
                 </tr>
               </table>
               <br />
