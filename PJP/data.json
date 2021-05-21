@@ -1,0 +1,45 @@
+[{
+  "id": 1,
+  "firstName": "Jeanette",
+  "lastName": "Penddreth",
+  "gender": "Female",
+  "dob": "24/10/1999",
+  "email": "jpenddreth0@census.gov",
+  "phone": 466897631,
+  "yoe": 5,
+  "qualificationDetails": {
+    "instituteName": "NIT Silchar",
+    "startDate": "45/45/1021",
+    "endDate": "12/43/0000",
+    "degree": "B.tech",
+    "stream": "cse",
+    "percentage": 64
+  },
+  "skills": ["eat", " sleep"],
+  "workExperience": {
+    "role": "SDE",
+    "organization": "PS",
+    "location": "Bangalore",
+    "startDate": "45/45/1021",
+    "endDate": "12/43/0000",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  },
+  "projectDetails": {
+    "title": "Lorem ipsum",
+    "startDate": "45/45/1021",
+    "endDate": "12/43/0000",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  },
+  "certifications": {
+    "courseName": "vhj",
+    "issuingOrganization": "PS",
+    "issueDate": "12/43/0000",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  },
+  "awards": "nbkbjhb",
+  "others": {
+    "relocate": "Yes",
+    "locationPreference": "Bangalore",
+    "salaryExpectation": 10
+  }
+}]

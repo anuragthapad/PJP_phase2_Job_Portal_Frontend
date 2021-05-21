@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=s, initial-scale=1.0">
+    <link rel="stylesheet" href="static/bootstrap.css">
+    <link rel="stylesheet" href="static/Admin_Pannel.css">
+    <title>Admin Profile</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container-fluid">
+            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                <span class="navbar-toggler-icon" data-bs-target="#offcanvasExample"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">Job Portal</a>
+            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SideBar -->
+
+    <div class="offcanvas offcanvas-start  sidebar-nav" data-bs-backdrop="false" tabindex="-1" id="offcanvasExample"
+        aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Admin</h5>
+            <button type="button" class="btn-close btn-close-white text-reset" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+        </div>
+        <div>
+            <a class="nav-link" aria-current="page" href="adminProfile.html">Admin Profile</a>
+            <a class="nav-link" href="userDetails.html">User Details</a>
+            <a class="nav-link" href="admin.html">Filter</a>
+        </div>
+    </div>
+
+    <main class="mt-5 pt-3">
+        <section class="container mx-auto">
+            <div class="card text-black bg-info mb-3 mx-auto">
+                <div class="card-header">Admin Profile</div>
+
+                <div class="card-body">
+                    <form action="adminProfile.html">
+                        <div class="row g-3">
+                            <h3 class="display-6">Account</h3>
+
+                            <div class="col-12">
+                                <label class="form-label" for="name">Username</label>
+                                <input class="form-control" type="text" id="name" name="name" value="ryan"
+                                    placeholder="Username">
+                            </div>
+
+                            <div class="col-12">
+                                <label class="form-label" for="email">Email</label>
+                                <input class="form-control" aria-describedby="required-description" placeholder="Email"
+                                    name="email" id="email" type="email" value="ryan@example.com" required />
+                            </div>
+
+                            <div class="col-12">
+                                <label class="form-label" for="password">Password</label>
+                                <input class="form-control" type="password" id="password" name="password"
+                                    value="12345678" placeholder="Password" required>
+                            </div>
+
+                            <div class="col-12">
+                                <label class="form-label" for="fullName">FullName</label>
+                                <input aria-describedby="required-description" placeholder="Full Name" name="fullName"
+                                    class="form-control" id="fullName" type="text" value="John Doe" required />
+                            </div>
+
+                            <div class="col-12">
+                                <label class="form-label" for="title">Title</label>
+                                <input type="text" class="form-control" id="title" name="title" placeholder="Title"
+                                    value="Administrator">
+                            </div>
+
+                            <div class="col-12">
+                                <button class="btn btn-primary">SAVE</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
