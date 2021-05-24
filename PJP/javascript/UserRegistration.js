@@ -9,12 +9,12 @@ $(document).ready(function () {
 
         var newSection = $('#clonedqual' + num).clone().attr('id', 'clonedqual' + newNum);
 
-        newSection.children(':first').children(':first').children(':first').attr('for', 'institutename' + newNum);
-        newSection.children(':first').children(':first').children(':nth-child(2)').attr('id', 'institutename' + newNum).attr('name', 'institutename' + newNum);
-        newSection.children(':first').children(':nth-child(2)').children(':first').attr('for', 'startedstudyingyear' + newNum);
-        newSection.children(':first').children(':nth-child(2)').children(':nth-child(2)').attr('id', 'startedstudyingyear' + newNum).attr('name', 'startedstudyingyear' + newNum);
-        newSection.children(':first').children(':nth-child(3)').children(':first').attr('for', 'endingstudyingyear' + newNum);
-        newSection.children(':first').children(':nth-child(3)').children(':nth-child(2)').attr('id', 'endingstudyingyear' + newNum).attr('name', 'endingstudyingyear' + newNum);
+        newSection.children(':first').children(':first').children(':first').attr('for', 'instituteName' + newNum);
+        newSection.children(':first').children(':first').children(':nth-child(2)').attr('id', 'instituteName' + newNum).attr('name', 'institutename' + newNum);
+        newSection.children(':first').children(':nth-child(2)').children(':first').attr('for', 'startDate' + newNum);
+        newSection.children(':first').children(':nth-child(2)').children(':nth-child(2)').attr('id', 'startDate' + newNum).attr('name', 'startDate' + newNum);
+        newSection.children(':first').children(':nth-child(3)').children(':first').attr('for', 'endDate' + newNum);
+        newSection.children(':first').children(':nth-child(3)').children(':nth-child(2)').attr('id', 'endDate' + newNum).attr('name', 'endDate' + newNum);
         newSection.children(':first').children(':nth-child(4)').children(':first').attr('for', 'degree' + newNum);
         newSection.children(':first').children(':nth-child(4)').children(':nth-child(2)').attr('id', 'degree' + newNum).attr('name', 'degree' + newNum);
         newSection.children(':first').children(':nth-child(5)').children(':first').attr('for', 'stream' + newNum);
@@ -27,13 +27,13 @@ $(document).ready(function () {
 
         $('#btnDelqual').prop('disabled', false);
 
-        document.getElementById('startedstudyingyear' + newNum).onchange = function () {
-            var input = document.getElementById('endingstudyingyear' + newNum);
+        document.getElementById('startDate' + newNum).onchange = function () {
+            var input = document.getElementById('endDate' + newNum);
             input.setAttribute("min", this.value);
         };
 
-        document.getElementById('endingstudyingyear' + newNum).onchange = function () {
-            var input = document.getElementById('startedstudyingyear' + newNum);
+        document.getElementById('endDate' + newNum).onchange = function () {
+            var input = document.getElementById('startDate' + newNum);
             input.setAttribute("max", this.value);
         };
 
@@ -63,8 +63,8 @@ $(document).ready(function () {
 
     endingstudyingyear1.max = new Date().toISOString().split("T")[0];
     startedstudyingyear1.max = new Date().toISOString().split("T")[0];
-    document.getElementById("startedstudyingyear1").onchange = function () {
-        var input = document.getElementById("endingstudyingyear1");
+    document.getElementById("startDate").onchange = function () {
+        var input = document.getElementById("endDate");
         input.setAttribute("min", this.value);
     };
 });
@@ -73,8 +73,8 @@ $(document).ready(function () {
 
     startedstudyingyear1.min = "1960-01-01";
     endingstudyingyear1.min = "1960-01-01";
-    document.getElementById("endingstudyingyear1").onchange = function () {
-        var input = document.getElementById("startedstudyingyear1");
+    document.getElementById("endDate").onchange = function () {
+        var input = document.getElementById("startDate");
         input.setAttribute("max", this.value);
     };
 });
@@ -90,8 +90,8 @@ $(document).ready(function () {
 
         var newSection = $('#clonedskill' + num).clone().attr('id', 'clonedskill' + newNum);
 
-        newSection.children(':first').children(':first').children(':first').attr('for', 'skill' + newNum);
-        newSection.children(':first').children(':first').children(':nth-child(2)').attr('id', 'skill' + newNum).attr('name', 'skill' + newNum);
+        newSection.children(':first').children(':first').children(':first').attr('for', 'skills' + newNum);
+        newSection.children(':first').children(':first').children(':nth-child(2)').attr('id', 'skills' + newNum).attr('name', 'skills' + newNum);
 
         $('.clonedskill').last().append(newSection)
 
@@ -131,13 +131,13 @@ $(document).ready(function () {
         newSection.children(':first').children(':first').children(':nth-child(2)').attr('id', 'role' + newNum).attr('name', 'role' + newNum);
         newSection.children(':first').children(':nth-child(2)').children(':first').attr('for', 'organization' + newNum);
         newSection.children(':first').children(':nth-child(2)').children(':nth-child(2)').attr('id', 'organization' + newNum).attr('name', 'organization' + newNum);
-        newSection.children(':first').children(':nth-child(3)').children(':first').attr('for', 'workedlocation' + newNum);
-        newSection.children(':first').children(':nth-child(3)').children(':nth-child(2)').attr('id', 'workedlocation' + newNum).attr('name', 'workedlocation' + newNum);
-        newSection.children(':first').children(':nth-child(4)').children(':first').attr('for', 'startedworkingyear' + newNum);
-        newSection.children(':first').children(':nth-child(4)').children(':nth-child(2)').attr('id', 'startedworkingyear' + newNum).attr('name', 'startedworkingyear' + newNum);
-        newSection.children(':first').children(':nth-child(5)').children(':first').attr('for', 'endingworkingyear' + newNum);
-        newSection.children(':first').children(':nth-child(5)').children(':nth-child(2)').attr('id', 'endingworkingyear' + newNum).attr('name', 'endingworkingyear' + newNum);
-        newSection.children(':first').children(':nth-child(6)').children(':first').attr('id', 'shortdescriptionofworkdone' + newNum).attr('name', 'shortdescriptionofworkdone' + newNum);
+        newSection.children(':first').children(':nth-child(3)').children(':first').attr('for', 'location' + newNum);
+        newSection.children(':first').children(':nth-child(3)').children(':nth-child(2)').attr('id', 'location' + newNum).attr('name', 'location' + newNum);
+        newSection.children(':first').children(':nth-child(4)').children(':first').attr('for', 'startDate' + newNum);
+        newSection.children(':first').children(':nth-child(4)').children(':nth-child(2)').attr('id', 'startDate' + newNum).attr('name', 'startDate' + newNum);
+        newSection.children(':first').children(':nth-child(5)').children(':first').attr('for', 'endDate' + newNum);
+        newSection.children(':first').children(':nth-child(5)').children(':nth-child(2)').attr('id', 'endDate' + newNum).attr('name', 'endDate' + newNum);
+        newSection.children(':first').children(':nth-child(6)').children(':first').attr('id', 'description' + newNum).attr('name', 'description' + newNum);
 
 
 
@@ -145,13 +145,13 @@ $(document).ready(function () {
 
         $('#btnDelwork').prop('disabled', false);
 
-        document.getElementById('startedworkingyear' + newNum).onchange = function () {
-            var input = document.getElementById('endingworkingyear' + newNum);
+        document.getElementById('startDate' + newNum).onchange = function () {
+            var input = document.getElementById('endDate' + newNum);
             input.setAttribute("min", this.value);
         };
 
-        document.getElementById('endingworkingyear' + newNum).onchange = function () {
-            var input = document.getElementById('startedworkingyear' + newNum);
+        document.getElementById('endDate' + newNum).onchange = function () {
+            var input = document.getElementById('startDate' + newNum);
             input.setAttribute("max", this.value);
         };
 
@@ -180,8 +180,8 @@ $(document).ready(function () {
 $(document).ready(function () {
     endingworkingyear1.max = new Date().toISOString().split("T")[0];
     startedworkingyear1.max = new Date().toISOString().split("T")[0];
-    document.getElementById("startedworkingyear1").onchange = function () {
-        var input = document.getElementById("endingworkingyear1");
+    document.getElementById("startDate").onchange = function () {
+        var input = document.getElementById("endDate");
         input.setAttribute("min", this.value);
     };
 });
@@ -189,8 +189,8 @@ $(document).ready(function () {
 $(document).ready(function () {
     startedworkingyear1.min = "1960-01-01";
     endingworkingyear1.min = "1960-01-01";
-    document.getElementById("endingworkingyear1").onchange = function () {
-        var input = document.getElementById("startedworkingyear1");
+    document.getElementById("endDate").onchange = function () {
+        var input = document.getElementById("startDate");
         input.setAttribute("max", this.value);
     };
 });
@@ -205,13 +205,13 @@ $(document).ready(function () {
 
         var newSection = $('#clonedproject' + num).clone().attr('id', 'clonedproject' + newNum);
 
-        newSection.children(':first').children(':first').children(':first').attr('for', 'projecttitle' + newNum);
-        newSection.children(':first').children(':first').children(':nth-child(2)').attr('id', 'projecttitle' + newNum).attr('name', 'projecttitle' + newNum);
-        newSection.children(':first').children(':nth-child(2)').children(':first').attr('for', 'startedprojectyear' + newNum);
-        newSection.children(':first').children(':nth-child(2)').children(':nth-child(2)').attr('id', 'startedprojectyear' + newNum).attr('name', 'startedprojectyear' + newNum);
-        newSection.children(':first').children(':nth-child(3)').children(':first').attr('for', 'endingprojectyear' + newNum);
-        newSection.children(':first').children(':nth-child(3)').children(':nth-child(2)').attr('id', 'endingprojectyear' + newNum).attr('name', 'endingprojectyear' + newNum);
-        newSection.children(':first').children(':nth-child(4)').children(':first').attr('id', 'shortdescriptionofprojectdone' + newNum).attr('name', 'shortdescriptionofprojectdone' + newNum);
+        newSection.children(':first').children(':first').children(':first').attr('for', 'title' + newNum);
+        newSection.children(':first').children(':first').children(':nth-child(2)').attr('id', 'title' + newNum).attr('name', 'title' + newNum);
+        newSection.children(':first').children(':nth-child(2)').children(':first').attr('for', 'startDate' + newNum);
+        newSection.children(':first').children(':nth-child(2)').children(':nth-child(2)').attr('id', 'startDate' + newNum).attr('name', 'startDate' + newNum);
+        newSection.children(':first').children(':nth-child(3)').children(':first').attr('for', 'endDate' + newNum);
+        newSection.children(':first').children(':nth-child(3)').children(':nth-child(2)').attr('id', 'endDate' + newNum).attr('name', 'endDate' + newNum);
+        newSection.children(':first').children(':nth-child(4)').children(':first').attr('id', 'description' + newNum).attr('name', 'description' + newNum);
 
 
 
@@ -219,13 +219,13 @@ $(document).ready(function () {
 
         $('#btnDelproject').prop('disabled', false);
 
-        document.getElementById('startedprojectyear' + newNum).onchange = function () {
-            var input = document.getElementById('endingprojectyear' + newNum);
+        document.getElementById('startDate' + newNum).onchange = function () {
+            var input = document.getElementById('endDate' + newNum);
             input.setAttribute("min", this.value);
         };
 
-        document.getElementById('endingprojectyear' + newNum).onchange = function () {
-            var input = document.getElementById('startedprojectyear' + newNum);
+        document.getElementById('endDate' + newNum).onchange = function () {
+            var input = document.getElementById('startDate' + newNum);
             input.setAttribute("max", this.value);
         };
 
@@ -254,8 +254,8 @@ $(document).ready(function () {
 $(document).ready(function () {
     endingprojectyear1.max = new Date().toISOString().split("T")[0];
     startedprojectyear1.max = new Date().toISOString().split("T")[0];
-    document.getElementById("startedprojectyear1").onchange = function () {
-        var input = document.getElementById("endingprojectyear1");
+    document.getElementById("startDate").onchange = function () {
+        var input = document.getElementById("endDate");
         input.setAttribute("min", this.value);
     };
 });
@@ -263,8 +263,8 @@ $(document).ready(function () {
 $(document).ready(function () {
     startedprojectyear1.min = "1960-01-01";
     endingprojectyear1.min = "1960-01-01";
-    document.getElementById("endingprojectyear1").onchange = function () {
-        var input = document.getElementById("startedprojectyear1");
+    document.getElementById("endDate").onchange = function () {
+        var input = document.getElementById("startDate");
         input.setAttribute("max", this.value);
     };
 });
@@ -278,12 +278,12 @@ $(document).ready(function () {
 
         var newSection = $('#clonedcertificate' + num).clone().attr('id', 'clonedcertificate' + newNum);
 
-        newSection.children(':first').children(':first').children(':first').attr('for', 'coursename' + newNum);
-        newSection.children(':first').children(':first').children(':nth-child(2)').attr('id', 'coursename' + newNum).attr('name', 'coursename' + newNum);
-        newSection.children(':first').children(':nth-child(2)').children(':first').attr('for', 'courseorganization' + newNum);
-        newSection.children(':first').children(':nth-child(2)').children(':nth-child(2)').attr('id', 'courseorganization' + newNum).attr('name', 'courseorganization' + newNum);
-        newSection.children(':first').children(':nth-child(3)').children(':first').attr('for', 'certificateissuedate' + newNum);
-        newSection.children(':first').children(':nth-child(3)').children(':nth-child(2)').attr('id', 'certificateissuedate' + newNum).attr('name', 'certificateissuedate' + newNum);
+        newSection.children(':first').children(':first').children(':first').attr('for', 'courseName' + newNum);
+        newSection.children(':first').children(':first').children(':nth-child(2)').attr('id', 'courseName' + newNum).attr('name', 'courseName' + newNum);
+        newSection.children(':first').children(':nth-child(2)').children(':first').attr('for', 'issuingOrganization' + newNum);
+        newSection.children(':first').children(':nth-child(2)').children(':nth-child(2)').attr('id', 'issuingOrganization' + newNum).attr('name', 'issuingOrganization' + newNum);
+        newSection.children(':first').children(':nth-child(3)').children(':first').attr('for', 'issueDate' + newNum);
+        newSection.children(':first').children(':nth-child(3)').children(':nth-child(2)').attr('id', 'issueDate' + newNum).attr('name', 'issueDate' + newNum);
 
 
         $('.clonedcertificate').last().append(newSection)
@@ -338,7 +338,7 @@ var check = function () {
         document.getElementById('pwdmsg1').style.color = '#ef476f';
         document.getElementById('pwdmsg1').innerHTML = 'Weak Password';
     }
-    if (document.getElementById('password').value == document.getElementById('confirm_password').value) {
+    if (document.getElementById('password').value == document.getElementById('confirmPassword').value) {
         document.getElementById('pwdmsg2').style.color = '#06d6a0';
         document.getElementById('pwdmsg2').innerHTML = 'Matching';
     } else {
