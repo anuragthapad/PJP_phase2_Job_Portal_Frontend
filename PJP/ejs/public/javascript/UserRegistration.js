@@ -9,36 +9,38 @@ $(document).ready(function () {
 
         var newSection = $('#clonedqual' + num).clone().attr('id', 'clonedqual' + newNum);
 
-        newSection.children(':first').children(':first').children(':first').attr('for', 'instituteName' + newNum);
-        newSection.children(':first').children(':first').children(':nth-child(2)').attr('id', 'instituteName' + newNum).attr('name', 'institutename' + newNum);
-        newSection.children(':first').children(':nth-child(2)').children(':first').attr('for', 'startDate' + newNum);
-        newSection.children(':first').children(':nth-child(2)').children(':nth-child(2)').attr('id', 'startDate' + newNum).attr('name', 'startDate' + newNum);
-        newSection.children(':first').children(':nth-child(3)').children(':first').attr('for', 'endDate' + newNum);
-        newSection.children(':first').children(':nth-child(3)').children(':nth-child(2)').attr('id', 'endDate' + newNum).attr('name', 'endDate' + newNum);
-        newSection.children(':first').children(':nth-child(4)').children(':first').attr('for', 'degree' + newNum);
-        newSection.children(':first').children(':nth-child(4)').children(':nth-child(2)').attr('id', 'degree' + newNum).attr('name', 'degree' + newNum);
-        newSection.children(':first').children(':nth-child(5)').children(':first').attr('for', 'stream' + newNum);
-        newSection.children(':first').children(':nth-child(5)').children(':nth-child(2)').attr('id', 'stream' + newNum).attr('name', 'stream' + newNum);
-        newSection.children(':first').children(':nth-child(6)').children(':first').attr('for', 'percentage' + newNum);
-        newSection.children(':first').children(':nth-child(6)').children(':nth-child(2)').attr('id', 'percentage' + newNum).attr('name', 'percentage' + newNum);
+
 
 
         $('.clonedqual').last().append(newSection)
 
         $('#btnDelqual').prop('disabled', false);
 
-        document.getElementById('startDate' + newNum).onchange = function () {
-            var input = document.getElementById('endDate' + newNum);
-            input.setAttribute("min", this.value);
-        };
-
-        document.getElementById('endDate' + newNum).onchange = function () {
-            var input = document.getElementById('startDate' + newNum);
-            input.setAttribute("max", this.value);
-        };
-
         if (newNum == 3)
             $('#btnAddqual').prop('disabled', true);
+
+
+        let st = document.querySelectorAll('input[name="startDate[]"]');
+        let ed = document.querySelectorAll('input[name="endDate[]"]');
+
+
+        for (let i = 0; i < 11; i++) {
+            st[i].max = new Date().toISOString().split("T")[0];
+            ed[i].max = new Date().toISOString().split("T")[0];
+            st[i].onchange = function () {
+                var input = ed[i];
+                input.min = st[i].value;
+            }
+        }
+
+        for (let j = 0; j < 11; j++) {
+            st[j].min = "1960-01-01";
+            ed[j].min = "1960-01-01";
+            ed[j].onchange = function () {
+                var input = st[j];
+                input.max = ed[j].value;
+            }
+        }
     });
 
     $('#btnDelqual').click(function () {
@@ -52,32 +54,15 @@ $(document).ready(function () {
         // if only one element remains, disable the "remove" button
         if (num - 1 == 1)
             $('#btnDelqual').prop('disabled', true);
+
+
+
     });
 
     $('#btnDelqual').prop('disabled', true);
 });
 
-// Date Validation for Qualification
 
-$(document).ready(function () {
-
-    endingstudyingyear1.max = new Date().toISOString().split("T")[0];
-    startedstudyingyear1.max = new Date().toISOString().split("T")[0];
-    document.getElementById("startDate").onchange = function () {
-        var input = document.getElementById("endDate");
-        input.setAttribute("min", this.value);
-    };
-});
-
-$(document).ready(function () {
-
-    startedstudyingyear1.min = "1960-01-01";
-    endingstudyingyear1.min = "1960-01-01";
-    document.getElementById("endDate").onchange = function () {
-        var input = document.getElementById("startDate");
-        input.setAttribute("max", this.value);
-    };
-});
 
 
 $(document).ready(function () {
@@ -90,8 +75,7 @@ $(document).ready(function () {
 
         var newSection = $('#clonedskill' + num).clone().attr('id', 'clonedskill' + newNum);
 
-        newSection.children(':first').children(':first').children(':first').attr('for', 'skills' + newNum);
-        newSection.children(':first').children(':first').children(':nth-child(2)').attr('id', 'skills' + newNum).attr('name', 'skills' + newNum);
+
 
         $('.clonedskill').last().append(newSection)
 
@@ -117,6 +101,9 @@ $(document).ready(function () {
     $('#btnDelskill').prop('disabled', true);
 });
 
+
+
+
 $(document).ready(function () {
     // Cloning Work Section
 
@@ -127,36 +114,37 @@ $(document).ready(function () {
 
         var newSection = $('#clonedwork' + num).clone().attr('id', 'clonedwork' + newNum);
 
-        newSection.children(':first').children(':first').children(':first').attr('for', 'role' + newNum);
-        newSection.children(':first').children(':first').children(':nth-child(2)').attr('id', 'role' + newNum).attr('name', 'role' + newNum);
-        newSection.children(':first').children(':nth-child(2)').children(':first').attr('for', 'organization' + newNum);
-        newSection.children(':first').children(':nth-child(2)').children(':nth-child(2)').attr('id', 'organization' + newNum).attr('name', 'organization' + newNum);
-        newSection.children(':first').children(':nth-child(3)').children(':first').attr('for', 'location' + newNum);
-        newSection.children(':first').children(':nth-child(3)').children(':nth-child(2)').attr('id', 'location' + newNum).attr('name', 'location' + newNum);
-        newSection.children(':first').children(':nth-child(4)').children(':first').attr('for', 'startDate' + newNum);
-        newSection.children(':first').children(':nth-child(4)').children(':nth-child(2)').attr('id', 'startDate' + newNum).attr('name', 'startDate' + newNum);
-        newSection.children(':first').children(':nth-child(5)').children(':first').attr('for', 'endDate' + newNum);
-        newSection.children(':first').children(':nth-child(5)').children(':nth-child(2)').attr('id', 'endDate' + newNum).attr('name', 'endDate' + newNum);
-        newSection.children(':first').children(':nth-child(6)').children(':first').attr('id', 'description' + newNum).attr('name', 'description' + newNum);
-
 
 
         $('.clonedwork').last().append(newSection)
 
         $('#btnDelwork').prop('disabled', false);
 
-        document.getElementById('startDate' + newNum).onchange = function () {
-            var input = document.getElementById('endDate' + newNum);
-            input.setAttribute("min", this.value);
-        };
-
-        document.getElementById('endDate' + newNum).onchange = function () {
-            var input = document.getElementById('startDate' + newNum);
-            input.setAttribute("max", this.value);
-        };
 
         if (newNum == 3)
             $('#btnAddwork').prop('disabled', true);
+
+        let st = document.querySelectorAll('input[name="startDate[]"]');
+        let ed = document.querySelectorAll('input[name="endDate[]"]');
+
+
+        for (let i = 0; i < 11; i++) {
+            st[i].max = new Date().toISOString().split("T")[0];
+            ed[i].max = new Date().toISOString().split("T")[0];
+            st[i].onchange = function () {
+                var input = ed[i];
+                input.min = st[i].value;
+            }
+        }
+
+        for (let j = 0; j < 11; j++) {
+            st[j].min = "1960-01-01";
+            ed[j].min = "1960-01-01";
+            ed[j].onchange = function () {
+                var input = st[j];
+                input.max = ed[j].value;
+            }
+        }
     });
 
     $('#btnDelwork').click(function () {
@@ -174,26 +162,9 @@ $(document).ready(function () {
     $('#btnDelwork').prop('disabled', true);
 });
 
-// Date Validation for Work
 
 
-$(document).ready(function () {
-    endingworkingyear1.max = new Date().toISOString().split("T")[0];
-    startedworkingyear1.max = new Date().toISOString().split("T")[0];
-    document.getElementById("startDate").onchange = function () {
-        var input = document.getElementById("endDate");
-        input.setAttribute("min", this.value);
-    };
-});
 
-$(document).ready(function () {
-    startedworkingyear1.min = "1960-01-01";
-    endingworkingyear1.min = "1960-01-01";
-    document.getElementById("endDate").onchange = function () {
-        var input = document.getElementById("startDate");
-        input.setAttribute("max", this.value);
-    };
-});
 
 $(document).ready(function () {
     // Cloning Project Section
@@ -205,13 +176,7 @@ $(document).ready(function () {
 
         var newSection = $('#clonedproject' + num).clone().attr('id', 'clonedproject' + newNum);
 
-        newSection.children(':first').children(':first').children(':first').attr('for', 'title' + newNum);
-        newSection.children(':first').children(':first').children(':nth-child(2)').attr('id', 'title' + newNum).attr('name', 'title' + newNum);
-        newSection.children(':first').children(':nth-child(2)').children(':first').attr('for', 'startDate' + newNum);
-        newSection.children(':first').children(':nth-child(2)').children(':nth-child(2)').attr('id', 'startDate' + newNum).attr('name', 'startDate' + newNum);
-        newSection.children(':first').children(':nth-child(3)').children(':first').attr('for', 'endDate' + newNum);
-        newSection.children(':first').children(':nth-child(3)').children(':nth-child(2)').attr('id', 'endDate' + newNum).attr('name', 'endDate' + newNum);
-        newSection.children(':first').children(':nth-child(4)').children(':first').attr('id', 'description' + newNum).attr('name', 'description' + newNum);
+
 
 
 
@@ -219,18 +184,32 @@ $(document).ready(function () {
 
         $('#btnDelproject').prop('disabled', false);
 
-        document.getElementById('startDate' + newNum).onchange = function () {
-            var input = document.getElementById('endDate' + newNum);
-            input.setAttribute("min", this.value);
-        };
 
-        document.getElementById('endDate' + newNum).onchange = function () {
-            var input = document.getElementById('startDate' + newNum);
-            input.setAttribute("max", this.value);
-        };
 
         if (newNum == 5)
             $('#btnAddproject').prop('disabled', true);
+
+        let st = document.querySelectorAll('input[name="startDate[]"]');
+        let ed = document.querySelectorAll('input[name="endDate[]"]');
+
+
+        for (let i = 0; i < 11; i++) {
+            st[i].max = new Date().toISOString().split("T")[0];
+            ed[i].max = new Date().toISOString().split("T")[0];
+            st[i].onchange = function () {
+                var input = ed[i];
+                input.min = st[i].value;
+            }
+        }
+
+        for (let j = 0; j < 11; j++) {
+            st[j].min = "1960-01-01";
+            ed[j].min = "1960-01-01";
+            ed[j].onchange = function () {
+                var input = st[j];
+                input.max = ed[j].value;
+            }
+        }
     });
 
     $('#btnDelproject').click(function () {
@@ -248,26 +227,6 @@ $(document).ready(function () {
     $('#btnDelproject').prop('disabled', true);
 });
 
-// Date Validation for Project
-
-
-$(document).ready(function () {
-    endingprojectyear1.max = new Date().toISOString().split("T")[0];
-    startedprojectyear1.max = new Date().toISOString().split("T")[0];
-    document.getElementById("startDate").onchange = function () {
-        var input = document.getElementById("endDate");
-        input.setAttribute("min", this.value);
-    };
-});
-
-$(document).ready(function () {
-    startedprojectyear1.min = "1960-01-01";
-    endingprojectyear1.min = "1960-01-01";
-    document.getElementById("endDate").onchange = function () {
-        var input = document.getElementById("startDate");
-        input.setAttribute("max", this.value);
-    };
-});
 
 $(document).ready(function () {
     // Cloning Certificate Section
@@ -278,12 +237,7 @@ $(document).ready(function () {
 
         var newSection = $('#clonedcertificate' + num).clone().attr('id', 'clonedcertificate' + newNum);
 
-        newSection.children(':first').children(':first').children(':first').attr('for', 'courseName' + newNum);
-        newSection.children(':first').children(':first').children(':nth-child(2)').attr('id', 'courseName' + newNum).attr('name', 'courseName' + newNum);
-        newSection.children(':first').children(':nth-child(2)').children(':first').attr('for', 'issuingOrganization' + newNum);
-        newSection.children(':first').children(':nth-child(2)').children(':nth-child(2)').attr('id', 'issuingOrganization' + newNum).attr('name', 'issuingOrganization' + newNum);
-        newSection.children(':first').children(':nth-child(3)').children(':first').attr('for', 'issueDate' + newNum);
-        newSection.children(':first').children(':nth-child(3)').children(':nth-child(2)').attr('id', 'issueDate' + newNum).attr('name', 'issueDate' + newNum);
+
 
 
         $('.clonedcertificate').last().append(newSection)
@@ -311,11 +265,40 @@ $(document).ready(function () {
 
 });
 
+
+//Date Validations for Start Date and End Date
+
+$(document).ready(function () {
+    let st = document.querySelectorAll('input[name="startDate[]"]');
+    let ed = document.querySelectorAll('input[name="endDate[]"]');
+
+
+    for (let i = 0; i < 11; i++) {
+        st[i].max = new Date().toISOString().split("T")[0];
+        ed[i].max = new Date().toISOString().split("T")[0];
+        st[i].onchange = function () {
+            var input = ed[i];
+            input.min = st[i].value;
+        }
+    }
+
+    for (let j = 0; j < 11; j++) {
+        st[j].min = "1960-01-01";
+        ed[j].min = "1960-01-01";
+        ed[j].onchange = function () {
+            var input = st[j];
+            input.max = ed[j].value;
+        }
+    }
+
+});
+
+
 // Date Validation for Certificates
 
 $(document).ready(function () {
-    certificateissuedate1.min = "1960-01-01";
-    certificateissuedate1.max = new Date().toISOString().split("T")[0];
+    issueDate.min = "1960-01-01";
+    issueDate.max = new Date().toISOString().split("T")[0];
 });
 
 
@@ -362,21 +345,6 @@ function successPage() {
         document.getElementById("user_msg").innerHTML = "User Registration is NOT Successful !";
     }
 }
-
-
-
-//Slide Collapse/Expand
-
-// $(".header").click(function () {
-
-//     $header = $(this);
-//     //getting the next element
-//     $content = $header.next();
-//     //open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
-//     $content.slideToggle(10);
-
-// });
-
 
 
 
