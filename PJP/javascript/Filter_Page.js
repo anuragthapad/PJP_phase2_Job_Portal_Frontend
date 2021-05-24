@@ -1,18 +1,18 @@
 
 
 
-document.getElementById("btn2").addEventListener('click', FilterJobProfile);
+document.getElementById("btn2").addEventListener('click', FilterJobLocation);
 
-function FilterJobProfile() {
+function FilterJobLocation() {
   var input, filter, table, tr, td, i, txtValue;
   selectElement = document.querySelector('#select2');
   myContainer = selectElement.value;
   input = document.getElementById("output1");
   filter = myContainer;
-  table = document.getElementById("myTable");
+  table = document.getElementById("table-sortable");
   tr = table.getElementsByTagName("tr");
   for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[7];
+    td = tr[i].getElementsByTagName("td")[8];
     if (td) {
       txtValue = td.textContent || td.innerText;
       if (txtValue.indexOf(filter) > -1) {
@@ -30,7 +30,7 @@ function FilterWorkExperience() {
   var input, filter, table, tr, td, i, txtValue;
   input = document.getElementById("myInput");
   filter = input.value.toUpperCase();
-  table = document.getElementById("myTable");
+  table = document.getElementById("table-sortable");
   tr = table.getElementsByTagName("tr");
   for (i = 0; i < tr.length; i++) {
     td = tr[i].getElementsByTagName("td")[6];
