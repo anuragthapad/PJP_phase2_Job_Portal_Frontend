@@ -13,483 +13,478 @@
 <body>
     <div class="page-wrap-userreg">
         <%- include('./Partials/nav.ejs') %>
-            <section class="container mx-auto">
-                <div class="card text-white bg-info mb-3 mx-auto">
-                    <div class="card-header">User Registration</div>
+        <section class="container mx-auto">
+            <div class="card text-white bg-info mb-3 mx-auto">
+                <div class="card-header">User Registration</div>
 
-                    <div class="card-body">
-                        <br />
-                        <br />
-                        <form method="POST" action="/user/register">
-                            <!-- Div for Personal Details -->
-                            <a class="addsection" data-toggle="collapse" href="#collapsepersonal" role="button"
-                                aria-expanded="false" aria-controls="collapsepersonal">
-                                <h2 class="display-6">+ Personal Details</h2>
+                <div class="card-body">
+                    <br />
+                    <br />
+                    <form action="UserRegistrationSuccessful.html">
+                        <!-- Div for Personal Details -->
+                        <a class="addsection" data-toggle="collapse" href="#collapsepersonal" role="button"
+                            aria-expanded="false" aria-controls="collapsepersonal">
+                            <h2 class="display-6">+ Personal Details</h2>
+                        </a>
+
+                        <div class="collapse show" id="collapsepersonal">
+                            <br />
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label" for="firstName">First Name</label>
+                                    <input class="form-control" type="text" name="firstName" id="firstName"
+                                        placeholder="First Name" required
+                                        value="<%= typeof firstName != 'undefined' ? firstName : '' %>" />
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-label" for="lastName">Last Name</label>
+                                    <input class="form-control" type="text" name="lastName" id="lastName"
+                                        placeholder="Last Name" required
+                                        value="<%= typeof lastName != 'undefined' ? lastName : '' %>" />
+                                </div>
+
+                                <div class="col-12">
+                                    <label class="form-label" for="gender">Gender</label>
+                                    <select class="form-select" name="gender" id="gender">
+                                        <option value="">Select</option>
+                                        <% var options = [ "Male", "Female", "Prefer not to say"];
+                                            for ( var i = 0; i < options.length; i++ ) { var selected
+                                                = ( config[0].gender == i ) ? "selected" : ""; %>
+                                        <option value="<%=options[ i ] %>" <%="selected" %>><%=i %>
+                                        </option>
+                                        <% } %>
+                                    </select>
+                                </div>
+
+                                <div class="col-12">
+                                    <label class="form-label" for="dob">Date of Birth</label>
+                                    <input class="form-control" type="date" name="dob" id="dob" required
+                                        value="<%= typeof dob != 'undefined' ? dob : '' %>" />
+                                </div>
+
+                                <div class="col-12">
+                                    <label class="form-label" for="email">Email</label>
+                                    <input class="form-control" type="email" name="email" id="email" placeholder="Email"
+                                        required value="<%= typeof dob != 'undefined' ? dob : '' %>" />
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-label" for="password">Enter Password</label>
+                                    <input class="form-control" id="password" type="password"
+                                        title="Password must contain at least 6 characters, including UPPER/lowercase and numbers."
+                                        required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" name="password"
+                                        onkeyup="check();" placeholder="Password"
+                                        value="<%= typeof password != 'undefined' ? password : '' %>" />
+                                    <span id="pwdmsg1"></span>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-label" for="confirmPassword">Confirm Password</label>
+                                    <input class="form-control" class="text" type="password"
+                                        title="Please enter the same Password as above." id="confirmPassword" required
+                                        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" name="confirmPassword"
+                                        onkeyup="check();" placeholder="Confirm Password"
+                                        value="<%= typeof confirmPassword != 'undefined' ? confirmPassword : '' %>" />
+                                    <span id="pwdmsg2"></span>
+                                </div>
+
+                                <div class="col-12">
+                                    <label class="form-label" for="phone">Phone</label>
+                                    <input class="form-control" type="tel" name="phone" id="phone" minlength="10"
+                                        maxlength="10" placeholder="Enter 10 Digit Number" pattern="[0-9]{10}" required
+                                        value="<%= typeof phone != 'undefined' ? phone : '' %>" />
+                                    <span class="telvalidity"></span>
+                                </div>
+
+                                <div class="col-12">
+                                    <label class="form-label" for="yoe">Years of Experience</label>
+                                    <input class="form-control" type="number" name="yoe" id="yoe" min="0" max="55"
+                                        required value="<%= typeof yoe != 'undefined' ? yoe : '' %>" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <br>
+                            <br>
+                            <a
+                            class="addsection"
+                            data-toggle="collapse"
+                            href="#collapseojob"
+                            role="button"
+                            aria-expanded="false"
+                            aria-controls="collapseojob"
+                            >
+                            <h2 class="display-6">+ Job Profile</h2>
                             </a>
 
-                            <div class="collapse show" id="collapsepersonal">
-                                <br />
-                                <div class="row g-3">
-                                    <div class="col-md-6">
-                                        <label class="form-label" for="firstName">First Name</label>
-                                        <input class="form-control" type="text" name="firstName" id="firstName"
-                                            placeholder="First Name" required
-                                            value="<%= typeof firstName != 'undefined' ? firstName : '' %>" />
-                                    </div>
-
-                                    <div class="col-md-6">
-                                        <label class="form-label" for="lastName">Last Name</label>
-                                        <input class="form-control" type="text" name="lastName" id="lastName"
-                                            placeholder="Last Name" required
-                                            value="<%= typeof lastName != 'undefined' ? lastName : '' %>" />
-                                    </div>
-
-                                    <div class="col-12">
-                                        <label class="form-label" for="gender">Gender</label>
-                                        <select class="form-select" name="gender" id="gender">
-                                            <option value="">Select</option>
-                                            <% var options=[ "Male" , "Female" , "Prefer not to say" ]; for ( var i=0; i
-                                                < options.length; i++ ) { var selected=( config[0].gender==i )
-                                                ? "selected" : "" ; %>
+                            <div class="collapse show" id="collapseojob">
+                                <div class="col-12">
+                                    <label class="form-label" for="jobProfile">Job Profile</label>
+                                    <select class="form-select" name="jobProfile" id="jobProfile">
+                                        <option value="">Select</option>
+                                        <% var options = [ "Web Developer", "Senior Software Engineer", "Java Developer", "C/C++ Developer", "PHP Developer", "Android Developer"];
+                                            for ( var i = 0; i < options.length; i++ ) { var selected
+                                                = ( config[0].jobProfile == i ) ? "selected" : ""; %>
                                                 <option value="<%=options[ i ] %>" <%="selected" %>><%=i %>
-                                                </option>
-                                                <% } %>
-                                        </select>
-                                    </div>
-
-                                    <div class="col-12">
-                                        <label class="form-label" for="dob">Date of Birth</label>
-                                        <input class="form-control" type="date" name="dob" id="dob" required
-                                            value="<%= typeof dob != 'undefined' ? dob : '' %>" />
-                                    </div>
-
-                                    <div class="col-12">
-                                        <label class="form-label" for="email">Email</label>
-                                        <input class="form-control" type="email" name="email" id="email"
-                                            placeholder="Email" required
-                                            value="<%= typeof dob != 'undefined' ? dob : '' %>" />
-                                    </div>
-
-                                    <div class="col-md-6">
-                                        <label class="form-label" for="password">Enter Password</label>
-                                        <input class="form-control" id="password" type="password"
-                                            title="Password must contain at least 6 characters, including UPPER/lowercase and numbers."
-                                            required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" name="password"
-                                            onkeyup="check();" placeholder="Password"
-                                            value="<%= typeof password != 'undefined' ? password : '' %>" />
-                                        <span id="pwdmsg1"></span>
-                                    </div>
-
-                                    <div class="col-md-6">
-                                        <label class="form-label" for="confirmPassword">Confirm Password</label>
-                                        <input class="form-control" class="text" type="password"
-                                            title="Please enter the same Password as above." id="confirmPassword"
-                                            required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"
-                                            name="confirmPassword" onkeyup="check();" placeholder="Confirm Password"
-                                            value="<%= typeof confirmPassword != 'undefined' ? confirmPassword : '' %>" />
-                                        <span id="pwdmsg2"></span>
-                                    </div>
-
-                                    <div class="col-12">
-                                        <label class="form-label" for="phone">Phone</label>
-                                        <input class="form-control" type="tel" name="phone" id="phone" minlength="10"
-                                            maxlength="10" placeholder="Enter 10 Digit Number" pattern="[0-9]{10}"
-                                            required value="<%= typeof phone != 'undefined' ? phone : '' %>" />
-                                        <span class="telvalidity"></span>
-                                    </div>
-
-                                    <div class="col-12">
-                                        <label class="form-label" for="yoe">Years of Experience</label>
-                                        <input class="form-control" type="number" name="yoe" id="yoe" min="0" max="55"
-                                            required value="<%= typeof yoe != 'undefined' ? yoe : '' %>" />
-                                    </div>
-
-                                    //
-                                    <div class="col-12">
-                                        // <label class="form-label" for="profilepic">Profile Picture</label> // <input
-                                            class="form-control form-control-sm" type="file" name="profilepic" //
-                                            id="profilepic" accept="image/*" /> // </div>
+                                            </option>
+                                        <% } %>
+                                    </select>
                                 </div>
                             </div>
+                        </div>
 
-                            <!-- Div for Qualification Details -->
+                        <!-- Div for Qualification Details -->
 
-                            <div>
+                        <div>
+                            <br />
+                            <br />
+                            <a class="addsection" data-toggle="collapse" href="#collapsequal" role="button"
+                                aria-expanded="false" aria-controls="collapsequal">
+                                <h2 class="display-6">+ Qualification Details</h2>
+                            </a>
+
+                            <div class="collapse" id="collapsequal">
                                 <br />
-                                <br />
-                                <a class="addsection" data-toggle="collapse" href="#collapsequal" role="button"
-                                    aria-expanded="false" aria-controls="collapsequal">
-                                    <h2 class="display-6">+ Qualification Details</h2>
-                                </a>
-
-                                <div class="collapse" id="collapsequal">
-                                    <br />
-                                    <div id="clonedqual1" class="clonedqual">
-                                        <div class="row g-3">
-                                            <% for (var i in user.qualificationDetails){%>
-                                                <div class="col-12">
-                                                    <label for="instituteName">Institute Name</label>
-                                                    <input class="form-control" type="text" name="instituteName[]"
-                                                        id="instituteName" placeholder="Institute Name"
-                                                        value="<%= user.qualificationDetails[i].instituteName %>" />
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <label for="startDate">Start Date</label>
-                                                    <input class="form-control" type="date" name="startDate[]"
-                                                        id="startDate"
-                                                        value="<%= user.qualificationDetails[i].startDate %>" />
-                                                </div>
-
-                                                <div class="col-md-6">
-                                                    <label for="endDate">End Date</label>
-                                                    <input class="form-control" type="date" name="endDate[]"
-                                                        id="endDate"
-                                                        value="<%= user.qualificationDetails[i].endDate %>" />
-                                                </div>
-
-                                                <div class="col-12">
-                                                    <label for="degree">Degree</label>
-                                                    <input class="form-control" type="text" name="degree[]" id="degree"
-                                                        placeholder="e.g. B.Tech"
-                                                        value="<%= user.qualificationDetails[i].degree %>" />
-                                                </div>
-
-                                                <div class="col-12">
-                                                    <label for="stream">stream1</label>
-                                                    <input class="form-control" type="text" name="stream[]" id="stream"
-                                                        placeholder="e.g. Computer Science"
-                                                        value="<%= user.qualificationDetails[i].stream %>" />
-                                                </div>
-
-                                                <div class="col-12">
-                                                    <label for="percentage">Percentage</label>
-                                                    <input class="form-control" type="number" name="percentage[]"
-                                                        id="percentage" min="0" max="100"
-                                                        value="<%= user.qualificationDetails[i].percentage %>" />
-                                                </div>
-                                                <%} %>
-                                        </div>
-                                    </div>
-
-                                    <br />
-                                    <div>
-                                        <input class="btn btn-success" type="button" id="btnAddqual"
-                                            value="Add Qualification" />
-                                        <input class="btn btn-danger" type="button" id="btnDelqual"
-                                            value="Remove Qualification" />
-                                    </div>
-                                </div>
-                            </div>
-
-                            // Div for Skills
-
-                            <div>
-                                <br />
-                                <br />
-                                <a class="addsection" data-toggle="collapse" href="#collapseskill" role="button"
-                                    aria-expanded="false" aria-controls="collapseskill">
-                                    <h2 class="display-6">+ Skills</h2>
-                                </a>
-
-                                <div class="collapse" id="collapseskill">
-                                    <br />
-                                    <div id="clonedskill1" class="clonedskill">
-                                        <% for (var i in user){%>
-                                            <div>
-                                                <div class="mb-3">
-                                                    <label for="skills">Skill</label>
-                                                    <input class="form-control" type="text" name="skills[]" id="skills"
-                                                        value="<%= user[i].skills %>" />
-                                                </div>
+                                <div id="clonedqual1" class="clonedqual">
+                                    <div class="row g-3">
+                                        <% for (var i in user.qualificationDetails){%>
+                                            <div class="col-12">
+                                                <label for="instituteName">Institute Name</label>
+                                                <input class="form-control" type="text" name="instituteName[]"
+                                                    id="instituteName" placeholder="Institute Name" value="<%= user.qualificationDetails[i].instituteName %>"/>
                                             </div>
-                                            <%} %>
-                                    </div>
-
-                                    <div>
-                                        <input class="btn btn-success" type="button" id="btnAddskill"
-                                            value="Add Skill" />
-                                        <input class="btn btn-danger" type="button" id="btnDelskill"
-                                            value="Remove Skill" />
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Div for Work Experience -->
-
-                            <div>
-                                <br />
-                                <br />
-                                <a class="addsection" data-toggle="collapse" href="#collapsework" role="button"
-                                    aria-expanded="false" aria-controls="collapsework">
-                                    <h2 class="display-6">+ Work Experience</h2>
-                                </a>
-
-                                <div class="collapse" id="collapsework">
-                                    <br />
-                                    <div id="clonedwork1" class="clonedwork">
-                                        <div class="row g-3">
-                                            <% for (var i in user.workExperience){%>
-                                                <div class="col-12">
-                                                    <label for="role">Role</label>
-                                                    <input class="form-control" type="text" name="role[]" id="role"
-                                                        placeholder="e.g. Web Developer"
-                                                        value="<%= user.workExperience[i].role %>" />
-                                                </div>
-
-                                                <div class="col-12">
-                                                    <label for="organization">Organization</label>
-                                                    <input class="form-control" type="text" name="organization[]"
-                                                        id="organization" placeholder="e.g. Publicis Sapient"
-                                                        value="<%= user.workExperience[i].organization %>" />
-                                                </div>
-
-                                                <div class="col-12">
-                                                    <label for="location">Location</label>
-                                                    <input class="form-control" type="text" name="location[]"
-                                                        id="location" placeholder="e.g. Bangalore"
-                                                        value="<%= user.workExperience[i].location %>" />
-                                                </div>
-
-                                                <div class="col-md-6">
-                                                    <label for="startDate">Start Date</label>
-                                                    <input class="form-control" type="date" name="startDate[]"
-                                                        id="startDate"
-                                                        value="<%= user.workExperience[i].startDate %>" />
-                                                </div>
-
-                                                <div class="col-md-6">
-                                                    <label for="endDate">End Date</label>
-                                                    <input class="form-control" type="date" name="endDate[]"
-                                                        id="endDate" value="<%= user.workExperience[i].endDate %>" />
-                                                </div>
-
-                                                <div class="col-12">
-                                                    <textarea class="form-control" name="description[]" id="description"
-                                                        cols="30" rows="10" placeholder="Short Description of work done"
-                                                        value="<%= user.workExperience[i].description %>"></textarea>
-                                                </div>
-                                                <%} %>
+                                            <div class="col-md-6">
+                                            <label for="startDate">Start Date</label>
+                                            <input class="form-control" type="date" name="startDate[]"
+                                                id="startDate" value="<%= user.qualificationDetails[i].startDate %>"/>
                                         </div>
-                                    </div>
 
-                                    <br />
-                                    <div>
-                                        <input class="btn btn-success" type="button" id="btnAddwork"
-                                            value="Add Experience" />
-                                        <input class="btn btn-danger" type="button" id="btnDelwork"
-                                            value="Remove Experience" />
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Div for Project Details -->
-
-                            <div>
-                                <br />
-                                <br />
-                                <a class="addsection" data-toggle="collapse" href="#collapseproj" role="button"
-                                    aria-expanded="false" aria-controls="collapseproj">
-                                    <h2 class="display-6">+ Project Details</h2>
-                                </a>
-
-                                <div class="collapse" id="collapseproj">
-                                    <br />
-                                    <div id="clonedproject1" class="clonedproject">
-                                        <div class="row g-3">
-                                            <% for (var i in user.projectDetails){%>
-                                                <div class="col-12">
-                                                    <label for="title">Title</label>
-                                                    <input class="form-control" type="text" name="title[]" id="title"
-                                                        placeholder="e.g. Job Registration Protal"
-                                                        value="<%= user.projectDetails[i].title %>" />
-                                                </div>
-
-                                                <div class="col-md-6">
-                                                    <label for="startDate">Start Date</label>
-                                                    <input class="form-control" type="date" name="startDate[]"
-                                                        id="startDate"
-                                                        value="<%= user.projectDetails[i].startDate %>" />
-                                                </div>
-
-                                                <div class="col-md-6">
-                                                    <label for="endDate">End Date</label>
-                                                    <input class="form-control" type="date" name="endDate[]"
-                                                        id="endDate" value="<%= user.projectDetails[i].endDate %>" />
-                                                </div>
-
-                                                <div class="col-12">
-                                                    <textarea class="form-control" name="description[]" id="description"
-                                                        cols="30" rows="10" placeholder="Short Description of project"
-                                                        value="<%= user.projectDetails[i].description %>"></textarea>
-                                                </div>
-                                                <%} %>
+                                        <div class="col-md-6">
+                                            <label for="endDate">End Date</label>
+                                            <input class="form-control" type="date" name="endDate[]"
+                                                id="endDate" value="<%= user.qualificationDetails[i].endDate %>"/>
                                         </div>
-                                    </div>
 
-                                    <br />
-                                    <div>
-                                        <input class="btn btn-success" type="button" id="btnAddproject"
-                                            value="Add Project" />
-                                        <input class="btn btn-danger" type="button" id="btnDelproject"
-                                            value="Remove Project" />
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Div for Certifications -->
-
-                            <div>
-                                <br />
-                                <br />
-                                <a class="addsection" data-toggle="collapse" href="#collapsecert" role="button"
-                                    aria-expanded="false" aria-controls="collapsecert">
-                                    <h2 class="display-6">+ Certifications</h2>
-                                </a>
-
-                                <div class="collapse" id="collapsecert">
-                                    <br />
-                                    <div id="clonedcertificate1" class="clonedcertificate">
-                                        <div class="row g-3">
-                                            <% for (var i in user.certifications){%>
-                                                <div class="col-12">
-                                                    <label for="courseName">Course Name</label>
-                                                    <input class="form-control" type="text" name="courseName[]"
-                                                        id="courseName" placeholder="e.g. SQL"
-                                                        value="<%= user.certifications[i].courseName %>" />
-                                                </div>
-
-                                                <div class="col-12">
-                                                    <label for="issuingOrganization">Issuing Organization</label>
-                                                    <input class="form-control" type="text" name="issuingOrganization[]"
-                                                        id="issuingOrganization" placeholder="e.g. Udemy"
-                                                        value="<%= user.certifications[i].issuingOrganization %>" />
-                                                </div>
-
-                                                <div class="col-12">
-                                                    <label for="issueDate">Issue Date</label>
-                                                    <input class="form-control" type="date" name="issueDate[]"
-                                                        id="issueDate"
-                                                        value="<%= user.certifications[i].issueDate %>" />
-                                                </div>
-
-                                                <div class="col-12">
-                                                    <textarea class="form-control" name="description[]" id="description"
-                                                        cols="30" rows="10"
-                                                        placeholder="Short Description of certification"
-                                                        value="<%= user.certifications[i].description %>"></textarea>
-                                                </div>
-                                                <%} %>
+                                        <div class="col-12">
+                                            <label for="degree">Degree</label>
+                                            <input class="form-control" type="text" name="degree[]" id="degree"
+                                                placeholder="e.g. B.Tech" value="<%= user.qualificationDetails[i].degree %>"/>
                                         </div>
-                                    </div>
 
-                                    <br />
-                                    <div>
-                                        <input class="btn btn-success" type="button" id="btnAddcertificate"
-                                            value="Add Certificate" />
-                                        <input class="btn btn-danger" type="button" id="btnDelcertificate"
-                                            value="Remove Certificate" />
-                                    </div>
-                                </div>
-                            </div>
+                                        <div class="col-12">
+                                            <label for="stream">stream1</label>
+                                            <input class="form-control" type="text" name="stream[]" id="stream"
+                                                placeholder="e.g. Computer Science" value="<%= user.qualificationDetails[i].stream %>"/>
+                                        </div>
 
-                            <!-- Div for Awards and Achievements -->
-
-                            <div>
-                                <br />
-                                <br />
-                                <a class="addsection" data-toggle="collapse" href="#collapseawards" role="button"
-                                    aria-expanded="false" aria-controls="collapseawards">
-                                    <h2 class="display-6">+ Awards and Achievements</h2>
-                                </a>
-                                <div class="collapse" id="collapseawards">
-                                    <br />
-                                    <p>
-                                        Add your accomplishments such as rewards, recognitions, test scores,
-                                        certifications, etc. here.
-                                    </p>
-                                    <% for (var i in user.awardsAndAchievement){%>
-                                        <div class="mb-3">
-                                            <textarea class="form-control" name="awards[]" id="awards" cols="30"
-                                                rows="10" placeholder="e.g. Achieved Expert level in CodeForces"
-                                                value="<%= i %>"></textarea>
+                                        <div class="col-12">
+                                            <label for="percentage">Percentage</label>
+                                            <input class="form-control" type="number" name="percentage[]"
+                                                id="percentage" min="0" max="100" value="<%= user.qualificationDetails[i].percentage %>"/>
                                         </div>
                                         <%} %>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <!-- Div for Others -->
-
-                            <br />
-                            <br />
-                            <a class="addsection" data-toggle="collapse" href="#collapseothers" role="button"
-                                aria-expanded="false" aria-controls="collapseothers">
-                                <h2 class="display-6">+ Others</h2>
-                            </a>
-                            <div class="collapse" id="collapseothers">
                                 <br />
-                                <div class="row g-3">
-                                    <div class="col-12">
-                                        <p>
-                                            Relocate: <label for="relocate">Yes</label>
-                                            <input type="radio" name="relocate" id="relocate" value="Yes" required
-                                                <%=user.others.relocate ? 'checked' : '' %>/>
-
-                                            <label for="relocate">No</label>
-                                            <input type="radio" name="relocate" id="relocate" value="No" required
-                                                <%=user.others.relocate ? 'checked' : '' %>/>
-                                        </p>
-
-                                        <p></p>
-                                    </div>
-
-                                    <div class="col-md-6">
-                                        <label class="form-label" for="locationPreference">Location Preference</label>
-                                        <select class="form-select" name="locationPreference" id="locationPreference"
-                                            required>
-                                            <option value="">Select</option>
-                                            <option value="Bangalore" <%=user.others.locationPreference ? 'selected'
-                                                : '' %>>Bangalore</option>
-                                            <option value="Hyderabad" <%=user.others.locationPreference ? 'selected'
-                                                : '' %>>Hyderabad</option>
-                                            <option value="Gurugram" <%=user.others.locationPreference ? 'selected' : ''
-                                                %>>Gurugram</option>
-                                            <option value="Mumbai" <%=user.others.locationPreference ? 'selected' : ''
-                                                %>>Mumbai</option>
-                                        </select>
-                                    </div>
-
-                                    <div class="col-md-6">
-                                        <label class="form-label" for="salaryExpectation">Salary Expectation</label>
-                                        <input class="form-select" type="number" name="salaryExpectation"
-                                            id="salaryExpectation" min="0" max="1000000000" required
-                                            value="<%= typeof salaryExpectation != 'undefined' ? salaryExpectation : '' %>" />
-                                    </div>
+                                <div>
+                                    <input class="btn btn-success" type="button" id="btnAddqual"
+                                        value="Add Qualification" />
+                                    <input class="btn btn-danger" type="button" id="btnDelqual"
+                                        value="Remove Qualification" />
                                 </div>
                             </div>
+                        </div>
 
-                            <!-- Div for Registration Button -->
+                        // Div for Skills 
+
+                        <div>
                             <br />
                             <br />
-                            <div>
-                                <button class="btn btn-primary">Register</button>
+                            <a class="addsection" data-toggle="collapse" href="#collapseskill" role="button"
+                                aria-expanded="false" aria-controls="collapseskill">
+                                <h2 class="display-6">+ Skills</h2>
+                            </a>
+
+                            <div class="collapse" id="collapseskill">
+                                <br />
+                                <div id="clonedskill1" class="clonedskill">
+                                    <% for (var i in user){%>
+                                        <div>
+                                            <div class="mb-3">
+                                                <label for="skills">Skill</label>
+                                                <input class="form-control" type="text" name="skills[]" id="skills" value="<%= user[i].skills %>"/>
+                                            </div>
+                                        </div>
+                                    <% } %>
+                                </div>
+
+                                <div>
+                                    <input class="btn btn-success" type="button" id="btnAddskill" value="Add Skill" />
+                                    <input class="btn btn-danger" type="button" id="btnDelskill" value="Remove Skill" />
+                                </div>
                             </div>
-                        </form>
-                    </div>
+                        </div>
+
+                        <!-- Div for Work Experience -->
+
+                        <div>
+                            <br />
+                            <br />
+                            <a class="addsection" data-toggle="collapse" href="#collapsework" role="button"
+                                aria-expanded="false" aria-controls="collapsework">
+                                <h2 class="display-6">+ Work Experience</h2>
+                            </a>
+
+                            <div class="collapse" id="collapsework">
+                                <br />
+                                <div id="clonedwork1" class="clonedwork">
+                                    <div class="row g-3">
+                                        <% for (var i in user.workExperience){%>
+                                            <div class="col-12">
+                                                <label for="role">Role</label>
+                                                <input class="form-control" type="text" name="role[]" id="role"
+                                                    placeholder="e.g. Web Developer" value="<%= user.workExperience[i].role %>"/>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <label for="organization">Organization</label>
+                                                <input class="form-control" type="text" name="organization[]"
+                                                    id="organization" placeholder="e.g. Publicis Sapient" value="<%= user.workExperience[i].organization %>"/>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <label for="location">Location</label>
+                                                <input class="form-control" type="text" name="location[]"
+                                                    id="location" placeholder="e.g. Bangalore" value="<%= user.workExperience[i].location %>"/>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <label for="startDate">Start Date</label>
+                                                <input class="form-control" type="date" name="startDate[]"
+                                                    id="startDate" value="<%= user.workExperience[i].startDate %>"/>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <label for="endDate">End Date</label>
+                                                <input class="form-control" type="date" name="endDate[]"
+                                                    id="endDate" value="<%= user.workExperience[i].endDate %>"/>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <textarea class="form-control" name="description[]"
+                                                    id="description" cols="30" rows="10"
+                                                    placeholder="Short Description of work done" value="<%= user.workExperience[i].description %>"></textarea>
+                                            </div>
+                                        <%} %>
+                                    </div>
+                                </div>
+
+                                <br />
+                                <div>
+                                    <input class="btn btn-success" type="button" id="btnAddwork"
+                                        value="Add Experience" />
+                                    <input class="btn btn-danger" type="button" id="btnDelwork"
+                                        value="Remove Experience" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Div for Project Details -->
+
+                        <div>
+                            <br />
+                            <br />
+                            <a class="addsection" data-toggle="collapse" href="#collapseproj" role="button"
+                                aria-expanded="false" aria-controls="collapseproj">
+                                <h2 class="display-6">+ Project Details</h2>
+                            </a>
+
+                            <div class="collapse" id="collapseproj">
+                                <br />
+                                <div id="clonedproject1" class="clonedproject">
+                                    <div class="row g-3">
+                                        <% for (var i in user.projectDetails){%>
+                                            <div class="col-12">
+                                                <label for="title">Title</label>
+                                                <input class="form-control" type="text" name="title[]"
+                                                    id="title" placeholder="e.g. Job Registration Protal" value="<%= user.projectDetails[i].title %>"/>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <label for="startDate">Start Date</label>
+                                                <input class="form-control" type="date" name="startDate[]"
+                                                    id="startDate" value="<%= user.projectDetails[i].startDate %>"/>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <label for="endDate">End Date</label>
+                                                <input class="form-control" type="date" name="endDate[]"
+                                                    id="endDate" value="<%= user.projectDetails[i].endDate %>"/>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <textarea class="form-control" name="description[]"
+                                                    id="description" cols="30" rows="10"
+                                                    placeholder="Short Description of project" value="<%= user.projectDetails[i].description %>"></textarea>
+                                            </div>
+                                        <%} %>
+                                    </div>
+                                </div>
+
+                                <br />
+                                <div>
+                                    <input class="btn btn-success" type="button" id="btnAddproject"
+                                        value="Add Project" />
+                                    <input class="btn btn-danger" type="button" id="btnDelproject"
+                                        value="Remove Project" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Div for Certifications -->
+
+                        <div>
+                            <br />
+                            <br />
+                            <a class="addsection" data-toggle="collapse" href="#collapsecert" role="button"
+                                aria-expanded="false" aria-controls="collapsecert">
+                                <h2 class="display-6">+ Certifications</h2>
+                            </a>
+
+                            <div class="collapse" id="collapsecert">
+                                <br />
+                                <div id="clonedcertificate1" class="clonedcertificate">
+                                    <div class="row g-3">
+                                        <% for (var i in user.certifications){%>
+                                            <div class="col-12">
+                                                <label for="courseName">Course Name</label>
+                                                <input class="form-control" type="text" name="courseName[]" id="courseName"
+                                                    placeholder="e.g. SQL" value="<%= user.certifications[i].courseName %>"/>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <label for="issuingOrganization">Issuing Organization</label>
+                                                <input class="form-control" type="text" name="issuingOrganization[]"
+                                                    id="issuingOrganization" placeholder="e.g. Udemy" value="<%= user.certifications[i].issuingOrganization %>"/>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <label for="issueDate">Issue Date</label>
+                                                <input class="form-control" type="date" name="issueDate[]"
+                                                    id="issueDate" value="<%= user.certifications[i].issueDate %>"/>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <textarea class="form-control" name="description[]"
+                                                    id="description" cols="30" rows="10"
+                                                    placeholder="Short Description of certification" value="<%= user.certifications[i].description %>"></textarea>
+                                            </div>
+                                        <%} %>
+                                    </div>
+                                </div>
+
+                                <br />
+                                <div>
+                                    <input class="btn btn-success" type="button" id="btnAddcertificate"
+                                        value="Add Certificate" />
+                                    <input class="btn btn-danger" type="button" id="btnDelcertificate"
+                                        value="Remove Certificate" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Div for Awards and Achievements -->
+
+                        <div>
+                            <br />
+                            <br />
+                            <a class="addsection" data-toggle="collapse" href="#collapseawards" role="button"
+                                aria-expanded="false" aria-controls="collapseawards">
+                                <h2 class="display-6">+ Awards and Achievements</h2>
+                            </a>
+                            <div class="collapse" id="collapseawards">
+                                <br />
+                                <p>
+                                    Add your accomplishments such as rewards, recognitions, test
+                                    scores, certifications, etc. here.
+                                </p>
+                                <div class="mb-3">
+                                    <textarea class="form-control" name="awards"
+                                        id="awards" cols="30" rows="10"
+                                        placeholder="e.g. Achieved Expert level in CodeForces" value="<%= typeof awards != 'undefined' ? awards : '' %>"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Div for Others -->
+
+                        <br />
+                        <br />
+                        <a class="addsection" data-toggle="collapse" href="#collapseothers" role="button"
+                            aria-expanded="false" aria-controls="collapseothers">
+                            <h2 class="display-6">+ Others</h2>
+                        </a>
+                        <div class="collapse" id="collapseothers">
+                            <br />
+                            <div class="row g-3">
+                                <div class="col-12">
+                                    <p>
+                                        Relocate: <label for="relocate">Yes</label>
+                                        <input type="radio" name="relocate" id="relocate" value="Yes" required <%= user.others.relocate ? 'checked' : '' %>/>
+
+                                        <label for="relocate">No</label>
+                                        <input type="radio" name="relocate" id="relocate" value="No" required <%= user.others.relocate ? 'checked' : '' %>/>
+                                    </p>
+
+                                    <p></p>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-label" for="locationPreference">Location Preference</label>
+                                    <select class="form-select" name="locationPreference" id="locationPreference"
+                                        required>
+                                        <option value="">Select</option>
+                                        <option value="Bangalore" <%= user.others.locationPreference ? 'selected' : '' %>>Bangalore</option>
+                                        <option value="Hyderabad" <%= user.others.locationPreference ? 'selected' : '' %>>Hyderabad</option>
+                                        <option value="Gurugram" <%= user.others.locationPreference ? 'selected' : '' %>>Gurugram</option>
+                                        <option value="Mumbai" <%= user.others.locationPreference ? 'selected' : '' %>>Mumbai</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-label" for="salaryExpectation">Salary Expectation</label>
+                                    <input class="form-select" type="number" name="salaryExpectation" id="salaryExpectation" min="0"
+                                        max="1000000000" required value="<%= typeof salaryExpectation != 'undefined' ? salaryExpectation : '' %>"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Div for Registration Button -->
+                        <br />
+                        <br />
+                        <div>
+                            <button class="btn btn-primary">Register</button>
+                        </div>
+                    </form>
                 </div>
-            </section>
+            </div>
+        </section>
     </div>
     <%- include('./Partials/footer.ejs') %>
-        <script src="http://code.jquery.com/jquery-3.6.0.js" type="text/javascript"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-            </script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-            </script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
-            </script>
-        <script src="javascript/userRegistration.js"></script>
+    <script src="http://code.jquery.com/jquery-3.6.0.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
+    </script>
+    <script src="javascript/userRegistration.js"></script>
 </body>
 
 </html>
