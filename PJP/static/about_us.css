@@ -1,0 +1,102 @@
+body{
+    background:#009879; 
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;     
+}
+
+  
+.bg-light {
+    background-color: rgb(1, 47, 73) !important;
+    padding-left: 2%;
+    padding-right: 2%;
+    font-family: var(--bs-font-sans-serif);
+}
+
+.nav-item a{
+    color: #fff !important;
+}
+
+.navbar-brand{
+    color: #fff !important;
+}
+  
+.navbar-nav{
+    width: 100% !important;
+    display: flex !important;
+    justify-content:flex-end !important;
+    align-items: center !important;
+}
+  
+.custom-toggler.navbar-toggler {
+    border-color: rgb(1, 47, 73);
+    color: rgb(1, 47, 73);
+}
+  
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+  
+.nav-item a:hover {
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    transition: 0.5s all;
+    background-color: #0f4869;
+    color: #fff !important;
+}
+  
+.navbar-brand:hover {
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    transition: 0.5s all;
+    background-color: #0f4869;
+    color: #fff !important;
+}     
+
+.content-table{
+    border-collapse: collapse;
+    margin: auto;
+    font-size: 1.1em;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,0.15);
+    border: 10px white solid;
+
+}
+
+#table-heading{
+    background-color: #009879;
+    text-align: left;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+    height:40px;
+}
+
+.content-table td{
+            padding: 8px 8px;
+}
+
+.content-table tbody tr{
+    border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr:nth-of-type(even){
+    background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type{
+    border-bottom:2px solid #009879 ;
+}
+        
+.title{
+    text-align: center;
+}
+
+
+  
